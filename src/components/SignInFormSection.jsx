@@ -9,6 +9,7 @@ const SignInCont = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     &>div>div>p:nth-of-type(1){
         font-size: 12px;
     }  ;

@@ -7,6 +7,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { IoInformationCircleOutline } from 'react-icons/io5';
 import { FaStar } from 'react-icons/fa';
 import { FaRegSmileBeam } from 'react-icons/fa';
+import { AiOutlineRight } from 'react-icons/ai';
 const Cont1 = styled.div`
     display: flex;
     background-color: white;
@@ -169,7 +170,37 @@ const Card1 = styled.div`
     }
 `
 const Cont3 = styled.div`
+    background-color: white;
+    padding: 1%;
+    &>h2, &>p{
+        margin-left: 15%;
+    }
+    &>div{
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+`
+
+const Card2 = styled.div`
+    display: flex;
+    margin: 10px;
     
+    img{
+        border: 1px solid #e6e6e6;
+        border-radius: 3px;
+        width: 50px;
+    }
+    &>div{
+        border: 1px solid #f5f5f5;
+        width: 200px;
+        height: 120px;
+        padding: 1%;
+        text-align: center;
+        *{
+            margin: 0;
+        }
+    }
 `
 
 export function DiscoverCompanies() {
@@ -286,7 +317,9 @@ export function DiscoverCompanies() {
                     
                 </div>
             </Cont1>
+            
             <Cont2>
+
                 <h2>Latest Reviews for Recommended Companies</h2>
                 <div>
                     <Card1>
@@ -354,6 +387,46 @@ export function DiscoverCompanies() {
                     </Card1>
                 </div>
             </Cont2>
+            
+            <Cont3>
+                <h2>Compare Companies</h2>
+                <p>See how companies stack up against their competitors using data only found on Glassdoor.</p>
+                <div>
+                    <Card2>
+                        <div>
+                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                            <h3>Google</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <FaStar color="rgb(12,170,65)" fontSize="12px"/>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                            <h3>Google</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <FaStar color="rgb(12,170,65)" fontSize="12px"/>
+                            </p>
+                        </div>
+                    </Card2>
+                    <Card2>
+                        <div>
+                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                            <h3>Google</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <FaStar color="rgb(12,170,65)" fontSize="12px"/>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                            <h3>Google</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <FaStar color="rgb(12,170,65)" fontSize="12px"/>
+                            </p>
+                        </div>
+                    </Card2>
+                </div>
+                <h3 style={{color:"rgb(24,97,191)", marginLeft:"40%"}}>Compare Companies <AiOutlineRight/> </h3>
+            </Cont3>
         </>
     )
 }
