@@ -48,7 +48,10 @@ const SignInCont = styled.div`
         height: 37px;
         /* padding:0 3%; */
         border-radius: 5px;
-
+        &>div{
+            position: absolute;
+            left: 10px;
+        }
     }
     form>button{
        background-color: rgb(24,119,242);
