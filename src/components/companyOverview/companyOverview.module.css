@@ -1,0 +1,153 @@
+.container {
+    width: 80%;
+    margin: 20px auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.companyProfile, .companyoverview, .rightExtraInfo {
+    width: 100%;
+    border: 1px solid rgb(207, 207, 207);
+    background: white;
+    border-radius: 5px;
+}
+
+.companyProfile img {
+    width: 100%;
+}
+
+.companyName {
+    width: 85%;
+    margin: 10px auto;
+    height: 50px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    bottom: 45px;
+    left: 20px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 3px;
+}
+
+.featuresContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features {
+    text-align: center;
+    width: 100px;
+    padding-top: 10px;
+    border-right: 1px solid rgb(207, 207, 207);
+}
+
+.features:hover {
+    background: rgb(233, 233, 233);
+}
+
+.features p:nth-child(1) {
+    margin: 0px;
+}
+
+.features p {
+    margin-top: 5px;
+}
+
+.featuresBtnSalary, .featuresBtnFollow {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    margin: 15px 5px;
+    background: #1861BF;
+    color: white;
+    border: 2px solid #1861BF;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.featuresBtnSalary i {
+    margin-right: 10px;
+}
+
+.featuresBtnFollow {
+    width: 120px;
+    background: white;
+    color: #1861BF;
+}
+
+.companyoverview {
+    width: 70%;
+    margin: 30px 0px;
+    padding: 15px;
+}
+
+.companyoverview > div > div {
+    margin-right: 70px;
+}
+
+.companyoverview > div > p {
+    margin: 10px;
+}
+
+.typeHeading {
+    width: 125px;
+    font-weight: 700;
+}
+
+.companyoverview > p {
+    font-size: 16px;
+    margin: 20px 0px;
+    line-height: 24px;
+}
+
+.companyoverview > p > span {
+    font-weight: 600;
+}
+
+.rightExtraInfo {
+    width: 25%;
+    margin: 30px 18px;
+    padding: 15px;
+    height: fit-content;
+}
+
+.rightExtraInfo h2 {
+    margin: 5px 0px;
+    font-weight: 500;
+}
+
+.rightExtraInfo > div {
+    margin: 15px 0px;
+}
+
+.logoDiv {
+    border: 1px solid rgb(207, 207, 207);
+    background: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    height: fit-content;
+}
+
+.rightExtraInfo > div > div > img {
+    width: 46px;
+}
+
+.rightCompanyInfo p {
+    margin: 1px;
+    font-size: 12px;
+}
+
+.rightExtraInfo p:nth-child(1) {
+    font-size: 15px;
+    color: #1861BF;
+}

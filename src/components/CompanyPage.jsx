@@ -2,6 +2,9 @@ import styled from "styled-components";
 import {Navbar} from "./navbar";
 import {Footer} from "./footer";
 import { CompareCompany } from "./CompareCompany";
+
+
+
 const CompanyNav = styled.nav`
     display: flex;
     border: 1px solid #c5c5c5;

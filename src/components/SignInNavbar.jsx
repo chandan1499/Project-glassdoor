@@ -4,6 +4,7 @@ import {useState} from "react";
 
 
 const Navbar = styled.nav`
+    text-align: center;
     height: 60px;
     background-color: rgb(255,255,255);
     /* background-color: green; */
@@ -70,7 +71,6 @@ export function SignInNavbar() {
     const [salariesModal, setSalariesModal] = useState("none");
     const [interviewsModal, setInterviewsModal] = useState("none");
     const [employersModal, setEmployersModal] = useState("none");
-    
 
     return (
         <>
@@ -78,7 +78,6 @@ export function SignInNavbar() {
                 <div>
                     <div>
                         <img src="/glassdoorLogo.png" alt="" />
-
                     </div>
                     <div onMouseOver={()=>setJobsModal("flex")} onMouseOut={()=>setJobsModal("none")}>Jobs</div>
                     <div onMouseOver={()=>setCompaniesModal("flex")} onMouseOut={()=>setCompaniesModal("none")}>Companies</div>
@@ -146,9 +145,7 @@ export function SignInNavbar() {
                     <div>
                         <img src="https://www.glassdoor.co.in/app/static/img/lockedHomeHeader/interview@2x.png" alt="" />
                     </div>
-                </Modal>
-                
-            
+                </Modal>    
         </>
     )
 }
