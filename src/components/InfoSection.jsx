@@ -5,6 +5,7 @@ import { AiOutlineDollar } from 'react-icons/ai';
 import { CgBriefcase } from 'react-icons/cg';
 const InfoCont = styled.div`
 position: relative;
+    text-align: center;
     h2{
         margin-top: 0;
         font-size: 35px;
