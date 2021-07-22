@@ -66,6 +66,7 @@ const Modal = styled.div`
         border-radius:5px;
         height:40px;
         width:200px;
+        cursor: pointer;
     }
 `;
 
