@@ -1,0 +1,252 @@
+.container {
+    width: 100%;
+    padding: 15px 0px 8px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    background: white;
+}
+
+.flex {
+    display: flex;
+}
+
+.navbarCont {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbarCont input {
+    height: 40px;
+    font-size: 16px;
+    padding: 0px 10px;
+    margin: 0px 5px;
+    border: 1px solid #c4c7cc;
+    border-radius: 3px;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbarCont select option {
+    width: 200px;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbarCont input:focus {
+    box-shadow: rgb(134, 215, 247) 0px 0px 0px 2px;
+    border: 1px solid rgb(42, 171, 222);
+    outline: none;
+}
+
+.jobSearch {
+    padding: 0px 10px 0px 35px !important;
+    width: 300px;
+}
+
+.jobtype {
+    width: 120px;
+    cursor: pointer;
+}
+
+.location {
+    position: relative;
+    right: 20px;
+    width: 250px;
+    font-family: 'Lato', sans-serif;
+}
+
+.searchBtn {
+    height: 41.5px;
+    margin: 0px;
+    position: relative;
+    right: 15px;
+    bottom: 1px;
+    width: 100px;
+    background: #0caa41;
+    color: white;
+    font-size: 18px;
+    border: 2px solid #0caa41;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+}
+
+.searchBtn:hover {
+    background-color: #056E28;
+    border: 2px solid #056E28;
+}
+
+.profileSvg span {
+    margin: 0px 8px;
+    cursor: pointer;
+}
+
+.profileSvg span:hover {
+    color: #056E28;
+}
+
+.jobtypePopup {
+    position: absolute;
+    z-index: 100;
+    width: 200px;
+    font-size: 18px;
+    right: 38.6%;
+    top: 7.8%;
+    border-radius: 3px;
+    background: white;
+    border: 2px solid rgb(196, 199, 204);
+}
+
+.jobtypePopup p {
+    margin: 0px;
+    height: 40px;
+    padding: 0px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.jobtypePopup p:hover, .userProfilePopup ul li:hover, .link:hover, .jobsPopup ul li:hover, .companinesPopup ul li:hover, .salariesPopup ul li:hover, .interviewsPopup ul li:hover, .forEmployers ul li:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.notificationPopup {
+    position: absolute;
+    z-index: 100;
+    border: 2px solid rgb(196, 199, 204);
+    border-radius: 3px;
+    height: 160px;
+    width: 26%;
+    top: 7.8%;
+    right: 11.9%;
+    background: white;
+    box-shadow: -1px 6px 14px -5px rgb(196 199 204);
+    font-family: 'STIX Two Math', serif;
+}
+
+.notificationPopup h2 {
+    margin: 0px;
+    padding: 12px 15px;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 32px;
+    border-bottom: 1px solid gray;
+}
+
+.loveSvg {
+    margin: 10px;
+}
+
+.notificationPopupDescription p, .notificationPopupDescription h3 {
+    font-weight: 600;
+    margin: 10px 0px;
+    font-size: 18px;
+    color: gray;
+}
+
+.notificationPopupDescription h3 {
+    margin-top: 5px;
+    color: #1861bf;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.userProfilePopup {
+    position: absolute;
+    z-index: 100;
+    width: 200px;
+    font-size: 18px;
+    right: 8%;
+    top: 7.8%;
+    border-radius: 3px;
+    background: white;
+    border: 2px solid rgb(196, 199, 204);
+}
+
+.userProfilePopup ul, .jobsPopup ul, .companinesPopup ul, .salariesPopup ul, .interviewsPopup ul, .forEmployers ul {
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 2px solid rgb(196, 199, 204);
+}
+
+.userProfilePopup ul li, .jobsPopup ul li, .companinesPopup ul li, .salariesPopup ul li, .interviewsPopup ul li, .forEmployers ul li {
+    list-style: none;
+    font-size: 16px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-family: 'STIX Two Math', serif;
+    font-weight: 600;
+    color: gray;
+    cursor: pointer;
+}
+
+.navSecondPartContainer {
+    background-color: white;
+    padding: 10px 0px;
+}
+
+.otherLinks {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.link {
+    align-items: center;
+    padding: 5px 20px 5px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.link h4 {
+    margin: 3px;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+.otherLinks svg {
+    margin: 0px 10px 0px 0px;
+}
+
+.jobsPopup, .companinesPopup, .salariesPopup, .interviewsPopup, .forEmployers {
+    position: absolute;
+    z-index: 100;
+    width: 200px;
+    font-size: 18px;
+    left: 8%;
+    top: 16.7%;
+    border-radius: 3px;
+    background: white;
+    border: 2px solid rgb(196, 199, 204);
+}
+
+.jobsPopup ul li, .companinesPopup ul li, .salariesPopup ul li, .interviewsPopup ul li, .forEmployers ul li {
+    font-weight: 500;
+}
+
+.companinesPopup {
+    left: 15%;
+}
+
+.salariesPopup {
+    left: 25.8%;
+}
+
+.interviewsPopup {
+    left: 34%;
+}
+
+.forEmployers {
+    left: 75%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

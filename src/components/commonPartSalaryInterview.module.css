@@ -1,0 +1,194 @@
+.flex {
+    display: flex;
+}
+
+.salariesBtnFlex {
+    display: flex;
+    width: 84%;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.salariesBtnFlex h4 {
+    margin-right: 20px;
+    margin-bottom: 0px;
+    padding: 0px 3px 15px;
+    border-bottom: 5px solid #0CAA41;
+    margin-top: 16px;
+}
+
+.salariesBtns {
+    background-color: rgb(245, 246, 247);
+    border-top: 1px solid rgb(209, 209, 209);
+}
+
+.image {
+    width: 100%;
+    height: 500px;
+    background-image: url("https://media.glassdoor.com/home/hero.jpg");
+    background-size: cover;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.salariesSearchDiv {
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    padding: 20px;
+    top: 30%;
+    left: 30%;
+    color: white;
+}
+
+.salariesSearchDiv h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 0px;
+}
+
+.salariesSearchDiv > div input {
+    padding: 15px 20px;
+    line-height: 24px;
+    font-size: 16px;
+    border-radius: 2px 0px 0px 2px;
+    border: none;
+    width: 220px;
+}
+
+.salariesSearchDiv > div input:focus {
+    outline: none;
+}
+
+.locationSearch {
+    border-radius: none !important;
+    position: relative;
+    right: 3px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.searchIcon {
+    background: #0CAA41;
+    width: 55px;
+    position: relative;
+    right: 2px;
+    cursor: pointer;
+    border-radius: 0px 2px 2px 0px;
+    height: 54px;
+}
+
+.cvUploading {
+    display: flex;
+    position: absolute;
+    top: 65%;
+    left: 30%;
+    text-align: center;
+    width: 40.5%;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.cvUploading div button {
+    font-size: 18px;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0px 8px;
+    cursor: pointer;
+}
+
+.cvUploading div button i {
+    font-size: 30px;
+}
+
+.cvUploading div button span {
+    position: relative;
+    bottom: 4px;
+    margin-left: 6px;
+}
+
+.SomeInfo, .typeOfSalaries {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.leftInfoPart {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.leftInfoPart p {
+    font-size: 18px;
+}
+
+.leftInfoPart button {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+    margin-top: 22px;
+    border-radius: 2px;
+    border: 2px solid #0CAA41;
+    cursor: pointer;
+    line-height: 1.33;
+    color: white;
+    font-weight: 600;
+    background: #0CAA41;
+}
+
+.leftInfoPart button:hover {
+    background: #0b6429;
+    border: 2px solid #0b6429;
+}
+
+.rightInfoPart {
+    width: 95%;
+    margin: auto;
+}
+
+.rightInfoPart img {
+    width: 100%;
+}
+
+.typeOfSalaries {
+    grid-template-columns: repeat(4, 1fr) !important;
+    width: 80% !important;
+    margin-top: 80px;
+}
+
+.typeOfSalaries ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.typeOfSalaries ul li {
+    list-style: none;
+    margin: 15px 0px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.typeOfSalaries ul li:hover {
+    text-decoration: underline;
+}
+
+.typeOfSalaries .heading {
+    font-size: 22px;
+    font-weight: 700;  
+    margin: 20px 0px; 
+    cursor: default;
+}
+
+.typeOfSalaries .heading:hover {
+    text-decoration: none;
+}
+
+.extraLink{
+    color: #1861bf;
+}

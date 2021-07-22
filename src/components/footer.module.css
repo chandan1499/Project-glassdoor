@@ -1,0 +1,188 @@
+.container {
+    width: 100%;
+    background-color: #404040;
+    overflow-x: hidden;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.footerHeading {
+    width: 100%;
+    border-bottom: 1px solid rgb(201, 197, 197);
+}
+
+.footerHeading h4 {
+    width: 70%;
+    margin: 20px auto;
+    font-weight: 500;
+}
+
+.links {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(201, 197, 197);
+}
+
+.linksDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+}
+
+.logaWithTitle {
+    width: 30%;
+    margin: 100px auto 0px;
+}
+
+.logaWithTitle svg {
+    width: 80%;
+    margin: auto;
+}
+
+.footerLinks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 70%;
+}
+
+.footerLinksBox {
+    text-align: left;
+    padding: 0px 10px;
+}
+
+.footerLinksBox ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.linksHeading {
+    font-weight: 600;
+    font-size: 18px !important;
+    cursor: default !important;
+}
+
+.footerLinksBox ul li {
+    list-style: none;
+    font-size: 16px;
+    margin: 10px 0px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.appInfo, .appInfo1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.appInfo h3 {
+    margin-right: 10px;
+}
+
+.appInfo svg {
+    margin: 10px;
+}
+
+.appInfo i {
+    font-size: 30px;
+}
+
+.appInfo1 {
+    margin-left: 20px;
+}
+
+.appInfo1 svg {
+    margin: 5px;
+}
+
+.jobtype {
+    height: 40px;
+    font-size: 16px;
+    padding: 0px 10px;
+    margin: 0px 5px;
+    border: 1px solid #c4c7cc;
+    border-radius: 3px;
+    font-family: 'Lato', sans-serif;
+    width: 120px;
+    cursor: pointer;
+}
+
+.jobtype:focus {
+    box-shadow: rgb(134, 215, 247) 0px 0px 0px 2px;
+    border: 1px solid rgb(42, 171, 222);
+    outline: none;
+}
+
+.footerInput {
+    display: flex;
+    align-items: center;
+}
+
+.footerInput svg { 
+    margin-top: 50px;
+}
+
+.footerInput input {
+    width: 200px;
+    margin-top: 50px;
+}
+
+.bottomCredits {
+    width: 100%;
+    border-bottom: 1px solid rgb(201, 197, 197);
+}
+
+.bottomCredits h4 {
+    text-align: center;
+}
+
+.bottomCredits h4 span {
+    text-decoration: underline;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.countryListPopup {
+    position: absolute;
+    z-index: 100;
+    width: 219px;
+    height: 200px;
+    overflow: auto;
+    font-size: 18px;
+    right: 16.94%;
+    bottom: 31.5%;
+    border-radius: 3px;
+    background-color: #404040;
+    border: 2px solid rgb(196, 199, 204);
+}
+
+.countryListPopup ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.countryListPopup ul li {
+    list-style: none;
+    font-size: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-family: 'STIX Two Math', serif;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.countryListPopup ul li:hover {
+    color: black;
+    background-color: rgb(230, 230, 230);
+}

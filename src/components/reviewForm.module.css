@@ -1,0 +1,175 @@
+.bodyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 15px auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    background: white;
+    padding: 10px 20px 5px;
+}
+
+.leftPart {
+    padding: 15px;
+    width: 65%;
+    background-color: white;
+    height: fit-content;
+    position: relative;
+}
+
+.leftPart h2 {
+    margin: 0px;
+}
+
+.redio {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: solid 1px #c4c7cc;
+    background-color: #f5f6f7;
+    box-sizing: border-box;
+    margin: 4px 10px 4px 50px;
+    margin-top: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.innerRedio {
+    border-radius: 4px;
+    height: 8px;
+    width: 8px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.firstFlexItem {
+    width: 200px;
+    margin-right: 10px;
+}
+
+.formExtraBtn {
+    width: 150px;
+    height: 38px;
+    font-size: 16px;
+    font-weight: 600;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.bodyContainer input {
+    width: 282px;
+    height: 30px;
+    margin: 15px 0px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.reviewFormSvg {
+    position: relative;
+    right: 35px;
+    top: 8px;
+}
+
+.nextBtn {
+    text-align: right;
+}
+
+.nextBtn button {
+    background: #1861BF;
+    color: white; 
+}
+
+.yearsPopup {
+    position: absolute;
+    z-index: 100;
+    width: 294px;
+    height: 200px;
+    overflow: auto;
+    font-size: 18px;
+    left: 31.15%;
+    top: 78%;
+    border-radius: 3px;
+    background-color: white;
+    border: 2px solid rgb(196, 199, 204);
+}
+
+.yearsPopup ul {
+    margin: 0px;    
+    padding: 0px;
+}
+
+.yearsPopup ul li {
+    list-style: none;
+    font-size: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+}
+
+.yearsPopup ul li:hover {
+    color: black;
+    background-color: rgb(218, 218, 218);
+}
+
+.rightPart {
+    margin-left: 20px;
+    background: white;
+    width: 28%;
+    padding: 10px;
+    height: fit-content;
+}
+
+.rightPart h3 {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.rightPart p {  
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.author {
+    margin-top: 0px;
+}
+
+.FAQsection {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    color: #1861BF;
+    cursor: pointer;
+}
+
+.FAQsection i {
+    margin-right: 20px;
+}
+
+.FAQsection p {
+    margin: 0px;
+}
+
+.rightPart h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.copyRightAndTC {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-top: 25px;
+}
