@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "glassdoorUsers": [
+    {
+      "email": "chandu@masai",
+      "password": "Hello",
+      "id": 1
+    },
+    {
+      "email": "munna@masai",
+      "password": "Hello",
+      "id": 2
+    },
+    {
+      "email": "Chandan@masaiSchool",
+      "password": "123456",
+      "id": 3
+    }
+  ]
+}
