@@ -128,6 +128,50 @@ const CompanyCard = styled.div`
     }
 `;
 
+const Cont2 = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &>div{
+        display: flex;
+    }
+`
+const Card1 = styled.div`
+    margin: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    background-color: white;
+    width: 370px;
+    height: 250px;
+    padding: 1% 1.5%;
+    img{
+        width: 50px;
+        border: 1px solid #d1d1d1;
+        border-radius: 3px;
+        margin: 0 10px;
+    }
+    
+    &>div:nth-child(1){
+        border-bottom: 1px solid #d1d1d1;
+        display: flex;
+        height: 80px;
+        align-items: center;
+        /* justify-content: space-around; */
+        h3, p{
+            margin: 0;
+        }
+
+    }
+    &>div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+`
+const Cont3 = styled.div`
+    
+`
+
 export function DiscoverCompanies() {
     return (
         <>
@@ -242,6 +286,74 @@ export function DiscoverCompanies() {
                     
                 </div>
             </Cont1>
+            <Cont2>
+                <h2>Latest Reviews for Recommended Companies</h2>
+                <div>
+                    <Card1>
+                        <div>
+                            <div>
+                                 <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                            </div>
+                            <div>
+                                <h3>Google</h3>
+                                <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <FaStar color="rgb(12,170,65)" fontSize="12px"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Current Employee Software Engineer</p>
+                            <div>
+                            <FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/>
+                            </div>
+                            <p>"Best company and best work culture ever"</p>
+                            <p>July 3,2021</p>
+                        </div>
+                    </Card1>
+                    <Card1>
+                        <div>
+                            <div>
+                                 <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                            </div>
+                            <div>
+                                <h3>Google</h3>
+                                <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <FaStar color="rgb(12,170,65)" fontSize="12px"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Current Employee Software Engineer</p>
+                            <div>
+                            <FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/>
+                            </div>
+                            <p>"Best company and best work culture ever"</p>
+                            <p>July 3,2021</p>
+                        </div>
+                    </Card1>
+                    <Card1>
+                        <div>
+                            <div>
+                                 <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                            </div>
+                            <div>
+                                <h3>Google</h3>
+                                <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <FaStar color="rgb(12,170,65)" fontSize="12px"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Current Employee Software Engineer</p>
+                            <div>
+                            <FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/><FaStar color="rgb(12,170,65)" fontSize="15px"/>
+                            </div>
+                            <p>"Best company and best work culture ever"</p>
+                            <p>July 3,2021</p>
+                        </div>
+                    </Card1>
+                </div>
+            </Cont2>
         </>
     )
 }

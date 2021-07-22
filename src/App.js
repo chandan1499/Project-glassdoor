@@ -10,14 +10,15 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Switch>
+      {/* <Switch>
         <Route exact path="/" component={Navbar} />
         <Route exact path="/SignIn" component={SignInPage} />
         <Route exact path="/Company" component={CompanyPage} />
         <Route exact path="/dicoverSalaries" component={DiscoverSalaries} />
         <Route exact path="/discoverInterview" component={DiscoverInterview} />
         <Route exact path="/reviewForm" component={ReviewForm} />
-      </Switch>
+      </Switch> */}
+      <CompanyPage />
     </div>
   );
 }
