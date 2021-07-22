@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Navbar} from "./navbar";
 import {Footer} from "./footer";
 import { CompareCompany } from "./CompareCompany";
+import { DiscoverCompanies } from "./DiscoverCompanies";
 const CompanyNav = styled.nav`
     display: flex;
     border: 1px solid #c5c5c5;
@@ -31,7 +32,7 @@ export function CompanyPage() {
                 <div>Suggested Follows</div>
                 <div>Write a Review</div>
             </CompanyNav>
-            <CompareCompany/>
+            <DiscoverCompanies/>
             <Footer />
         </div>
     )
