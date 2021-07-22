@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {Navbar} from "./navbar";
-import {Footer} from "./footer";
+import {Navbar} from "../navbar";
+import {Footer} from "../footer";
 import { CompareCompany } from "./CompareCompany";
 import { DiscoverCompanies } from "./DiscoverCompanies";
 const CompanyNav = styled.nav`

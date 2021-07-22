@@ -2,8 +2,8 @@ import "./App.css";
 import { DiscoverSalaries } from "./components/salaries/discoverSalaries";
 import { DiscoverInterview } from "./components/interview/discoverInterviews";
 import { ReviewForm } from "./components/reviewForm";
-import { SignInPage } from "./components/SignInPage";
-import { CompanyPage } from "./components/CompanyPage";
+import { SignInPage } from "./components/SignInPage/SignInPage";
+import { CompanyPage } from "./components/CompanySection/CompanyPage";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/discoverInterview" component={DiscoverInterview} />
         <Route exact path="/reviewForm" component={ReviewForm} />
       </Switch> */}
-      <SignInPage />
+      <CompanyPage />
     </div>
   );
 }
