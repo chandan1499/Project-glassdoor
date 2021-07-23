@@ -6,14 +6,13 @@ import { SignInPage } from "./components/SignInPage/SignInPage";
 import { CompanyPage } from "./components/CompanySection/CompanyPage";
 import { JobsList } from "./components/JobsListPage/JobsList";
 import { Route, Switch } from "react-router-dom";
-import Dashboard from './components/After_Sign_In/Dashboard'
-import Profile from './components/Profile_Page/Profile';
-
+import Dashboard from "./components/After_Sign_In/Dashboard";
+import Profile from "./components/Profile_Page/Profile";
 
 function App() {
   return (
     <div className="App">
-      <Switch>
+      {/* <Switch>
         <Route exact path="/" component={SignInPage} />
         <Route exact path="/SignIn" component={SignInPage} />
         <Route exact path="/Company" component={CompanyPage} />
@@ -23,7 +22,8 @@ function App() {
         <Route exact path="/dashboard" component={Dashboard} /> 
         <Route exact path="/Profile" component={Profile} />
         
-      </Switch>
+      </Switch> */}
+      <CompanyPage />
     </div>
   );
 }

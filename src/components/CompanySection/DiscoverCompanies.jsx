@@ -8,6 +8,11 @@ import { IoInformationCircleOutline } from 'react-icons/io5';
 import { FaStar } from 'react-icons/fa';
 import { FaRegSmileBeam } from 'react-icons/fa';
 import { AiOutlineRight } from 'react-icons/ai';
+import { RiCustomerService2Line } from 'react-icons/ri';
+import { FaBalanceScaleLeft } from 'react-icons/fa';
+import { FaFileInvoiceDollar } from 'react-icons/fa';
+import { FiPenTool } from 'react-icons/fi';
+import { GrTools } from 'react-icons/gr';
 const Cont1 = styled.div`
     display: flex;
     background-color: white;
@@ -202,7 +207,21 @@ const Card2 = styled.div`
         }
     }
 `
-
+const Card3 = styled.div`
+    border: 1px solid #c7c7c7;
+    font-weight: 500;
+    width: 400px;
+    height: 80px;
+    margin: 5px;
+    padding: 1%;
+    &>div{
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        padding: 1%;
+    }
+`
 export function DiscoverCompanies() {
     return (
         <>
@@ -426,6 +445,44 @@ export function DiscoverCompanies() {
                     </Card2>
                 </div>
                 <h3 style={{color:"rgb(24,97,191)", marginLeft:"40%"}}>Compare Companies <AiOutlineRight/> </h3>
+                <div style={{display:"flex", flexDirection:"column"}}>
+                    <h2>Explore Sectors</h2>
+                    <div style={{display:"flex"}}>
+                        <Card3>
+                            <div>
+
+                                <RiCustomerService2Line fontSize="20px" />
+                        </div>
+                                
+                            <p>Customer Services</p>
+                        </Card3>
+                        <Card3>
+                            <div>
+                            <FaBalanceScaleLeft fontSize="20px"/>
+                            </div>
+                            
+                            <p>Accounting & Legal</p>
+                        </Card3>
+                        <Card3>
+                            <div>
+                            <FaFileInvoiceDollar fontSize="20px"/>
+                            </div>
+                            <p>Finance</p>
+                        </Card3>
+                        <Card3>
+                            <div>
+                            <FiPenTool fontSize="20px"/>
+                            </div>
+                            <p>Arts, Entertainment &...</p>
+                        </Card3>
+                        <Card3>
+                            <div>
+                            <GrTools fontSize="20px"/>
+                            </div>
+                            <p>Building, Repairs &...</p>
+                        </Card3>
+                    </div>
+                </div>
             </Cont3>
         </>
     )
