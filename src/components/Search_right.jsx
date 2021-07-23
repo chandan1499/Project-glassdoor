@@ -126,6 +126,33 @@ return (
             <li>- High degree of responsibility with module-level ownership</li>
         </ul>
     </div>
+    <div className={styles.rightStates}>
+        <h4>Average Base Salary Estimate</h4>
+        <div>
+            <span>
+            <svg className={styles.rightStates_svg1} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd"><path d="M15.54 9.24l-5 4.78-2-1.78a.88.88 0 00-1.21 0 .8.8 0 000 1.16l2.63 2.36a.88.88 0 001.21 0l5.66-5.36a.8.8 0 000-1.16.88.88 0 00-1.29 0z"></path><path d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"></path></g></svg>
+            </span>
+            Estimate provided by employer
+        </div>
+        <div>
+            <div>
+            ₹1,62,000
+            <span>&nbsp;/mo (est.)</span>
+            </div>
+            <div className={styles.rightLines}>
+                <div></div>
+                <div></div>
+                <div>
+                    <span>
+                    ₹1L
+                    <span>&nbsp;/mo</span>
+                    </span>
+                    <span>₹2L</span>
+                </div>
+            </div>
+        </div>
+        <p className={styles.lastP}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
     </>
 );
 

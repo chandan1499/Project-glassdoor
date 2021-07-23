@@ -409,3 +409,105 @@ ul{
 li{
     margin-bottom: 5px;
 }
+.rightStates{
+    border-width: 0px;
+    line-height: 15px;
+    padding: 16px !important;
+    padding: 0;
+    width: 100%;
+
+}
+.rightStates > h4{
+    margin-bottom: 4px;
+    color: rgb(32, 38, 46);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 32px;
+    margin: 0px;
+/* color: yellow; */
+}
+.rightStates > div:nth-child(2){
+    font-size: 16px;
+    line-height: 24px;
+}
+.rightStates > div:nth-child(1) > span:nth-child(1){
+
+}
+.rightStates_svg1{
+    width: 18px;
+    height: 18px;
+    color: rgb(12, 170, 65);
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: bottom;
+
+}
+.rightStates > div:nth-child(3){
+    display: flex;
+    margin-top: 16px;
+}
+@media screen and (min-width: 767px){
+.rightStates > div:nth-child(3) > div:nth-child(1){
+    width: 33%;
+}
+}
+.rightStates > div:nth-child(3) > div:nth-child(1){
+    color: rgb(32, 38, 46);
+    /* color: yellow; */
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 36px;
+    margin-bottom: 8px;
+}
+.rightStates > div:nth-child(3) > div:nth-child(2){
+    display: flex !important;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    flex-direction: column !important;
+}
+.rightStates > div:nth-child(3) > div:nth-child(1) > span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.rightLines>div:nth-child(1){
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(12, 64, 133);
+    height: 0px;
+    width: 0px;
+    visibility: visible;
+    margin-bottom: 4px;
+    margin-left: calc(50% - 10px);
+    border-width: 0px;
+    line-height: 15px;
+}
+.rightLines > div:nth-child(2){
+    background: rgb(24, 97, 191);
+    height: 17px;
+    width: 95%;
+    border-width: 0px;
+    line-height: 15px;
+
+}
+.rightLines > div:nth-child(3){
+    margin-top: 12px !important;
+    display: flex !important;
+    -webkit-box-pack: justify !important;
+    justify-content: space-between !important;
+    width: 94%;
+
+}
+.rightLines > div:nth-child(3) > span{
+    color: rgb(80, 88, 99);
+    font-size: 15px;
+    line-height: 24px;
+}
+.lastP{
+    text-align: justify;
+    padding: 15px;
+    padding-right: 30px;
+    line-height: initial;
+}
