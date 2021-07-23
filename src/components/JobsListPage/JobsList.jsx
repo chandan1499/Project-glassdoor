@@ -2,11 +2,12 @@ import { Navbar } from "../navbar"
 import { Footer } from "../footer"
 import styled from "styled-components"
 import axios from "axios"
-import { FaStar } from 'react-icons/fa';
-import { BiHeart } from 'react-icons/bi';
+import { useState, useEffect } from "react";
+import { JobCard } from "./JobCard";
+import SearchRight from "../Search_right";
 const Cont = styled.div`
     background-color: white;
-        width: 80%;
+        width: 85%;
         border-radius: 5px;
         margin: 20px auto;
     &>div{
@@ -14,41 +15,22 @@ const Cont = styled.div`
         
         &>div:nth-of-type(1){
             height: 600px;
-            overflow-y: scroll;
+            /* overflow-y: auto; */
+            width: 35%;
+            border:1px solid #d4d4d4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        };
+        &>div:nth-of-type(2){
+            height: 600px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            width: 65%;
         }
+
     }
     
-`
-
-const Card = styled.div`
-    color:grey;
-    display: flex;
-    width: 450px;
-    justify-content: space-between;
-    padding: 2% 1%;
-    height: 100px;
-    border:1px solid #d4d4d4;
-    img{
-        width: 40px;
-        border:1px solid #d4d4d4;
-        border-radius: 3px;
-    }
-    h3, p, h4{
-        margin: 0;
-    }
-    &>div:nth-of-type(3){
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        &>div{
-            display: flex;
-            justify-content: flex-end;
-            *{
-                margin: 4px;
-            }
-        }
-    }
 `
 const InnerNav = styled.div`
     background-color: white;
@@ -65,7 +47,27 @@ const InnerNav = styled.div`
     }
 `
 export function JobsList() {
-    
+    const [list, setList] = useState([]);
+    const [rightShow, setRightShow] = useState({})
+    useEffect(() => {
+        axios.get("http://localhost:3001/jobList").then(({data}) => {
+            console.log('res:', data);
+            setList(data)
+            setRightShow(data[0])
+        }).catch((err) => {
+            console.log('err:', err)
+            
+        })    
+    }, [])
+
+    const handleClick = (id) => {
+        for (let elem of list) {
+            if (elem.id === id) {
+                setRightShow(elem);
+                break;
+            }
+        }
+    }
     return (
         <>
             <Navbar />
@@ -103,30 +105,16 @@ export function JobsList() {
             </InnerNav>
                 <div>
                     <div>
-                    <Card>
-                        <div>
-                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
-                          <p style={{color:"rgb(12,170,65)"}}>4.8 <FaStar fontSize="12px"/></p> 
-                        </div>
-                        <div>
-                            <p>Google</p>
-                            <h4>Full Stack Developer</h4>
-                            <p>Bangalore</p>
-                            <p>₹25L-₹40L (Employer Est.)</p>
-                        </div>
-                        <div>
-                            <div>
-                                <BiHeart color="rgb(24,97,191)" fontSize="25px"/>
-                            </div>
-                            <div>
-                                <h4>Easy Apply</h4>
-                                <p>7d</p>
-                            </div>
-                        </div>
+                        {
+                            list.map((elem) => {
+                                return <JobCard {...elem} key={elem.id} handleClick={ handleClick}/>
+                            })
+                        }
 
-                    </Card>
-
-                </div>
+                    </div>
+                    <div>
+                        <SearchRight {...rightShow}/>
+                    </div>
                 </div>
                 
             </Cont>
