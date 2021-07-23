@@ -57,7 +57,8 @@ const Modal = styled.div`
         font-weight: 500;
     }
     img{
-        width:50%;
+        width:90%;
+        
     }
     button{
         background-color:white;
@@ -67,6 +68,9 @@ const Modal = styled.div`
         height:40px;
         width:200px;
         cursor: pointer;
+    }
+    &>div:nth-of-type(2){
+        width: 400px;
     }
 `;
 
