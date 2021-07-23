@@ -31,6 +31,11 @@
       "email": "Chandan@masaiSchool",
       "password": "123456",
       "id": 3
+    },
+    {
+      "email": "kumar@masai",
+      "password": "123",
+      "id": 4
     }
   ]
 }

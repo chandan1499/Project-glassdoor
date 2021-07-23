@@ -6,9 +6,8 @@ import { SignInPage } from "./components/SignInPage/SignInPage";
 import { CompanyPage } from "./components/CompanySection/CompanyPage";
 import { JobsList } from "./components/JobsListPage/JobsList";
 import { Route, Switch } from "react-router-dom";
-import Dashboard from './components/After_Sign_In/Dashboard'
-import Profile from './components/Profile_Page/Profile';
-
+import Dashboard from "./components/After_Sign_In/Dashboard";
+import Profile from "./components/Profile_Page/Profile";
 
 function App() {
   return (
@@ -19,13 +18,12 @@ function App() {
         <Route exact path="/Company" component={CompanyPage} />
         <Route exact path="/dicoverSalaries" component={DiscoverSalaries} />
         <Route exact path="/discoverInterview" component={DiscoverInterview} />
-        <Route exact path="/reviewForm" component={ReviewForm} /> 
-        <Route exact path="/dashboard" component={Dashboard} /> 
+        <Route exact path="/reviewForm" component={ReviewForm} />
+        <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/Profile" component={Profile} />
          
         
       </Switch>
-      {/* <CompanyPage /> */}
     </div>
   );
 }

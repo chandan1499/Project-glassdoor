@@ -1,0 +1,80 @@
+.container {
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    /* background: rgb(236, 236, 236); */
+}
+
+.dataContainer {
+    width: 75%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.dataContainer h4 {
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.compareSection, .compareSection1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-gap: 1px;
+    border: 1px solid rgb(216, 216, 216);
+    background: rgb(216, 216, 216);
+    margin: 40px 0px;
+}
+
+.compareSection1 {
+    margin-bottom: 20px;
+}
+
+.compareSection {
+    margin-top: 20px;
+}
+
+
+.compareType {
+    background: white;
+    padding: 10px;
+}
+
+.compareType h3, .compareType p{
+    margin: 10px 0px;
+}
+
+.name {
+    font-size: 30px;
+}
+
+.compareType img {
+    width: 80px;
+    border: 2px solid rgb(216, 216, 216);
+    margin-right: 20px;
+}
+
+.compareType h3 {
+    width: 200px;
+}
+
+.compareType button {
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid rgb(216, 216, 216);
+}
+
+.rating {
+    font-size: 40px;
+}
+
+.compareType h3 span {
+    color: #0caa41;
+}
