@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SearchRight.module.css'
 
-const SearchRight = () => {
+const SearchRight = ({company, jobProfile,location,salaryRange}) => {
 
 return (
     <>
@@ -9,9 +9,9 @@ return (
         <div className={styles.searchRight_div1_1}>
             <div>
                 <div>
-                    <div>Quor Technologies, Inc.</div>
-                    <div>Front End Developer</div>
-                    <div>Bangalore</div>
+                        <div>{ company}</div>
+                        <div>{ jobProfile}</div>
+                        <div>{ location}</div>
                     <div>
                         <span>
                             <span>
@@ -20,7 +20,7 @@ return (
                                 </span>
                                 Employer Provided Salary:
                             </span>
-                            ₹5L - ₹12L 
+                                { salaryRange}
                             <span className={styles.icon_i}>
                             <svg class="SVGInline-svg greyInfoIcon-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 14A7 7 0 117 0a7 7 0 010 14zm0-.7A6.3 6.3 0 107 .7a6.3 6.3 0 000 12.6zm-.7-7a.7.7 0 011.4 0v4.2a.7.7 0 01-1.4 0zM7 4.2a.7.7 0 110-1.4.7.7 0 010 1.4z" fill="#505863" fill-rule="evenodd"></path></svg>
                             </span>
@@ -125,6 +125,33 @@ return (
             <li>- High degree of responsibility with module-level ownership</li>
             <li>- High degree of responsibility with module-level ownership</li>
         </ul>
+    </div>
+    <div className={styles.rightStates}>
+        <h4>Average Base Salary Estimate</h4>
+        <div>
+            <span>
+            <svg className={styles.rightStates_svg1} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd"><path d="M15.54 9.24l-5 4.78-2-1.78a.88.88 0 00-1.21 0 .8.8 0 000 1.16l2.63 2.36a.88.88 0 001.21 0l5.66-5.36a.8.8 0 000-1.16.88.88 0 00-1.29 0z"></path><path d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"></path></g></svg>
+            </span>
+            Estimate provided by employer
+        </div>
+        <div>
+            <div>
+            ₹1,62,000
+            <span>&nbsp;/mo (est.)</span>
+            </div>
+            <div className={styles.rightLines}>
+                <div></div>
+                <div></div>
+                <div>
+                    <span>
+                    ₹1L
+                    <span>&nbsp;/mo</span>
+                    </span>
+                    <span>₹2L</span>
+                </div>
+            </div>
+        </div>
+        <p className={styles.lastP}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
     </>
 );
