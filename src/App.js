@@ -18,7 +18,6 @@ function App() {
         <Route exact path="/discoverInterview" component={DiscoverInterview} />
         <Route exact path="/reviewForm" component={ReviewForm} />
       </Switch>
-      {/* <CompanyPage /> */}
     </div>
   );
 }
