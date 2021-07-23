@@ -12,18 +12,16 @@ import Profile from "./components/Profile_Page/Profile";
 function App() {
   return (
     <div className="App">
-      {/* <Switch>
+      <Switch>
         <Route exact path="/" component={SignInPage} />
         <Route exact path="/SignIn" component={SignInPage} />
         <Route exact path="/Company" component={CompanyPage} />
         <Route exact path="/dicoverSalaries" component={DiscoverSalaries} />
         <Route exact path="/discoverInterview" component={DiscoverInterview} />
-        <Route exact path="/reviewForm" component={ReviewForm} /> 
-        <Route exact path="/dashboard" component={Dashboard} /> 
+        <Route exact path="/reviewForm" component={ReviewForm} />
+        <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/Profile" component={Profile} />
-        
-      </Switch> */}
-      <CompanyPage />
+      </Switch>
     </div>
   );
 }
