@@ -36,6 +36,11 @@
       "email": "kumar@masai",
       "password": "123",
       "id": 4
+    },
+    {
+      "email": "Chandu@masai",
+      "password": "Hello",
+      "id": 5
     }
   ],
   "companies": [
@@ -46,7 +51,7 @@
       "totalEmployee": "5001 - 20000",
       "companyType": "Private Sector",
       "Salary": "5L - 50L",
-      "logo" : "https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png",
+      "logo": "https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png",
       "status": "Operating",
       "Revenue": "$15+ billion (USD)",
       "website": "www.google.com"

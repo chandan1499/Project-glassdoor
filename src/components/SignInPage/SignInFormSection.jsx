@@ -2,8 +2,9 @@ import styled from "styled-components";
 import {useState} from "react";
 import axios from 'axios';
 // import FacebookIcon from '@material-ui/icons/Facebook';
-import { FaFacebook } from 'react-icons/fa'
-import { FcGoogle } from 'react-icons/fc'
+import { FaFacebook } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
+import { useHistory } from 'react-router-dom'
 
 
 const SignInCont = styled.div`
@@ -91,6 +92,7 @@ const SignInCont = styled.div`
 
 export function SignInFormSection() {
     const [loginData, setLoginData] = useState({});
+    const history = useHistory();
 
     const handleChange = (e)=>{
         const {name, value} = e.target;
@@ -121,12 +123,12 @@ export function SignInFormSection() {
                     alert("Invalid Credentials!");
                 }
                 else{
-                    alert("Login sucussfully!");
+                    history.push("/Dashboard");
                 }
             }
             else{
                 postData();
-                alert('login sucussfully!');
+                history.push("/Dashboard");
             }
         }).catch((err)=>{
             console.log(err);
