@@ -1,0 +1,67 @@
+.gdforEmp_header a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.gdforEmp_header a:hover{
+    color: #0caa41;
+}
+.gdforEmp_header{
+    height: 150px;
+    background-color: white;
+}
+.gdforEmp_header_top{
+    display: flex;
+    justify-content:flex-end;
+    height: 50px;
+    background-color: #f5f6f7;
+}
+.gdforEmp_header_top > a{
+    margin: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+.gdforEmp_header_bottom{
+    display: flex;
+    border-bottom:solid 3px #dbd9d9;
+    height: 120px;
+}
+.gdforEmp_header_bottom > a{
+    margin-left: 50px;
+    margin-top: 28px;
+}
+.gdforEmp_header_bottom_right{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+   margin-left: 350px;
+   font-size: 25px;
+   font-weight: 500;
+   color: #404040;
+   line-height: 120px;
+}
+.free_employer_account{
+    width: 310px;
+    color: #0caa41;
+    margin-top: 8px;
+    border: solid 1px #0caa41 ;
+    height: 50px;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center ;
+}
+.free_employer_account:hover{
+    background-color:#0caa41 ;
+    color: white;
+   
+}
+.free_employer_account  i{
+    color: #0caa41;
+}
+.gdforEmp_header i{
+    margin-left: 7px;
+    color: #404040;
+}
