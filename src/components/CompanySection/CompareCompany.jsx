@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { Navbar } from "../navbar";
 import { Footer } from "../footer";
 import { Redirect, useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaStar } from 'react-icons/fa';
 import { BsStar } from 'react-icons/bs';
+import axios from 'axios';
 
 const CompareCont = styled.div`
     width: 1000px;
@@ -116,19 +117,62 @@ const CompanyList = styled.div`
 export function CompareCompany() {
     const [companies, setCompanies] = useState({});
     const history = useHistory();
+    const [firstCompany, setFirstCompany] = useState({});
+    const [secondCompany, setSecondCompany] = useState({});
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setCompanies({ ...companies, [name]: value });
     }
 
-    const handleComparison = () => {
+    const handleComparison = async () => {
         if ((companies.company1 == undefined || companies.company2 == "") || companies.company2 == undefined || companies.company1 == "") {
             alert("Please type correct company name!");
             return;
         }
 
-        history.push("/ShowComparison");
+        companies.company1 = companies.company1[0].toUpperCase() + companies.company1.substring(1);
+        companies.company2 = companies.company2[0].toUpperCase() + companies.company2.substring(1);
+
+        getData(companies.company1, 1);
+        getData(companies.company2, 2);
+    }
+
+    const getData = (name, num)=>{
+        axios.get(`http://localhost:3001/companies?q=${name}`).then((res)=>{
+            if(res.data.length == 0){
+                alert(`${name} is not registered!`);
+                return;
+            }
+            
+            if(num == 1){
+                setFirstCompany({...res.data[0]});
+            }
+            else{
+                setSecondCompany({...res.data[0]});
+            }
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
+
+    useEffect(()=>{
+        showComparison();
+    },[secondCompany])
+
+    const showComparison = ()=>{
+        if(Object.keys(firstCompany).length === 0 || Object.keys(secondCompany).length === 0){
+            return;
+        }
+
+        history.push({
+            pathname: "/ShowComparison",
+            state: {
+                first: firstCompany,
+                second: secondCompany
+            }
+        });
     }
 
     return (

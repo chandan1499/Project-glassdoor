@@ -22,9 +22,10 @@ const CompanyNav = styled.nav`
 
 `;
 
-export function ShowCompareCompanies() {
-    const company1 = "Google";
-    const company2 = "Facebook";
+export function ShowCompareCompanies({location}) {
+   // console.log(location);
+    const company1 = location.state.first;
+    const company2 = location.state.second;
 
     return (
         <div>
@@ -37,8 +38,8 @@ export function ShowCompareCompanies() {
             </CompanyNav>
             <div className={styles.container}>
                 <div className={styles.dataContainer}>
-                    <h2>{`Compare ${company1} vs ${company2}`}</h2>
-                    <h4>{`See how working at ${company1} vs. ${company2} compares on a variety of workplace factors. By comparing employers on employee ratings, salaries, reviews, pros/cons, job openings and more, you'll feel one step ahead of the rest. All salaries and reviews are posted by employees working at ${company1} vs. ${company2}. Learn more about each company and apply to jobs near you.`}</h4>
+                    <h2>{`Compare ${company1.name} vs ${company2.name}`}</h2>
+                    <h4>{`See how working at ${company1.name} vs. ${company2.name} compares on a variety of workplace factors. By comparing employers on employee ratings, salaries, reviews, pros/cons, job openings and more, you'll feel one step ahead of the rest. All salaries and reviews are posted by employees working at ${company1.name} vs. ${company2.name}. Learn more about each company and apply to jobs near you.`}</h4>
 
                     <div>
                         <div className={styles.compareSection1}>
@@ -47,15 +48,15 @@ export function ShowCompareCompanies() {
                             </div>
                             <div className={styles.compareType}>
                                 <div className={styles.flex}>
-                                    <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
-                                    <h3 className={styles.name}>{`${company1}`}</h3>
+                                    <img src={company1.logo} alt="" />
+                                    <h3 className={styles.name}>{`${company1.name}`}</h3>
                                     <Link to="/CompareCompany"><button>Change</button></Link>
                                 </div>
                             </div>
                             <div className={styles.compareType}>
                                 <div className={styles.flex}>
-                                    <img src="https://media.glassdoor.com/sql/40772/facebook-squareLogo-1621582235975.png" alt="" />
-                                    <h3 className={styles.name}>{`${company2}`}</h3>
+                                    <img src={company2.logo} alt="" />
+                                    <h3 className={styles.name}>{`${company2.name}`}</h3>
                                     <Link to="/CompareCompany"><button>Change</button></Link>
                                 </div>
                             </div>
@@ -67,10 +68,10 @@ export function ShowCompareCompanies() {
                                 <h3>CEO</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>Sundar Pichai</h3>
+                                <h3>{company1.ceo}</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>Mark Zuckerberg</h3>
+                                <h3>{company2.ceo}</h3>
                             </div>
 
 
@@ -78,10 +79,10 @@ export function ShowCompareCompanies() {
                                 <h3>Year Founded</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>2005</h3>
+                                <h3>{company1.foundedYear}</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>2007</h3>
+                                <h3>{company2.foundedYear}</h3>
                             </div>
 
 
@@ -95,7 +96,7 @@ export function ShowCompareCompanies() {
                             </div>
                             <div className={styles.compareType}>
                                 <h3 className={styles.rating}>4.2 <span>★</span></h3>
-                                <p>(based on 17571 reviews)</p>
+                                <p>(based on 18501 reviews)</p>
                             </div>
 
 
@@ -103,10 +104,10 @@ export function ShowCompareCompanies() {
                                 <h3>Total Employees</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>501 - 2000</h3>
+                                <h3>{company1.totalEmployee}</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>501 - 1500</h3>
+                                <h3>{company2.totalEmployee}</h3>
                             </div>
 
 
@@ -114,10 +115,10 @@ export function ShowCompareCompanies() {
                                 <h3>Company Type</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>Private Sector</h3>
+                                <h3>{company1.companyType}</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>Private Sector</h3>
+                                <h3>{company2.companyType}</h3>
                             </div>
 
 
@@ -125,10 +126,10 @@ export function ShowCompareCompanies() {
                                 <h3>Salary (Annual)</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>5L - 50L</h3>
+                                <h3>{company1.Salary}</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>3L - 50L</h3>
+                                <h3>{company2.Salary}</h3>
                             </div>
 
 
@@ -136,10 +137,21 @@ export function ShowCompareCompanies() {
                                 <h3>Company Status</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>Operating</h3>
+                                <h3>{company1.status}</h3>
                             </div>
                             <div className={styles.compareType}>
-                                <h3>Operating</h3>
+                                <h3>{company2.status}</h3>
+                            </div>
+
+
+                            <div className={styles.compareType}>
+                                <h3>Website</h3>
+                            </div>
+                            <div className={styles.compareType}>
+                                <h3 className={styles.websiteLink}>{company1.website}</h3>
+                            </div>
+                            <div className={styles.compareType}>
+                                <h3 className={styles.websiteLink}>{company2.website}</h3>
                             </div>
                         </div>
                     </div>
