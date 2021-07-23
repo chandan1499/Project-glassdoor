@@ -92,6 +92,7 @@ const CompanyList = styled.div`
         height: 80px;
          /* border:2px solid  rgb(172, 172, 172); */
          padding: 2%;
+         
 
     }
     &>div>div>div{
@@ -192,15 +193,15 @@ export function CompareCompany() {
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/8014/cognizant-technology-solutions-squarelogo-1533046362395.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>3.8</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Cognizant
                         </div>
                     </div>
                     <div>
@@ -237,15 +238,15 @@ export function CompareCompany() {
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/42613/genpact-squarelogo-1505910332584.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>3.8</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Genpact
                         </div>
                     </div>
 
@@ -254,46 +255,15 @@ export function CompareCompany() {
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/7927/infosys-squareLogo-1620208556721.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>3.8</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
+                            Infosys
                         </div>
                     </div>
                     <div>
@@ -316,29 +286,60 @@ export function CompareCompany() {
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/425536/oil-and-natural-gas-squarelogo-1562740594850.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>4.2</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Oil and Natural Gas
                         </div>
                     </div>
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/6341/indian-oil-squarelogo.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>4.3</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Indian Oil
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <img src="https://media.glassdoor.com/sql/11763/icici-bank-squarelogo.png" alt="" />
+                            </div>
+                            <div>
+                                <div>3.7</div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
+                            </div>
+                        </div>
+                        <div>
+                            ICICI Bank
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <img src="https://media.glassdoor.com/sql/434136/kotak-mahindra-squarelogo.png" alt="" />
+                            </div>
+                            <div>
+                                <div>3.5</div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
+                            </div>
+                        </div>
+                        <div>
+                            Kotak Mahindra Bank
                         </div>
                     </div>
 
@@ -361,15 +362,15 @@ export function CompareCompany() {
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/9936/wipro-squareLogo-1624895061639.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>3.7</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Wipro
                         </div>
                     </div>
 
@@ -378,29 +379,29 @@ export function CompareCompany() {
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>4.3</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Amazon
                         </div>
                     </div>
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/8418/amdocs-squarelogo-1503490445898.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>3.9</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Amdocs
                         </div>
                     </div>
 
@@ -409,29 +410,29 @@ export function CompareCompany() {
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>4.3</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Amazon
                         </div>
                     </div>
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/690021/byju-s-squarelogo-1607329527740.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>3.3</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            BYJU'S
                         </div>
                     </div>
 
@@ -440,405 +441,34 @@ export function CompareCompany() {
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/3472/ericsson-worldwide-squarelogo-1522695466023.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>4.1</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Ericsson-Worldwide
                         </div>
                     </div>
                     <div>
                         <div>
                             <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
+                                <img src="https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png" alt="" />
                             </div>
                             <div>
-                                <div>4.0</div>
+                                <div>4.2</div>
                                 <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
-                            Accenture
+                            Amazon
                         </div>
                     </div>
 
                 </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="https://media.glassdoor.com/sql/4138/accenture-squarelogo-1603988625135.png" alt="" />
-                            </div>
-                            <div>
-                                <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
-                            </div>
-                        </div>
-                        <div>
-                            Accenture
-                        </div>
-                    </div>
-
-                </div>
+                
             </CompanyList>
 
             <Footer />

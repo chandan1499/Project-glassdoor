@@ -32,7 +32,7 @@ export function CompanyPage() {
                 <div>Suggested Follows</div>
                 <div>Write a Review</div>
             </CompanyNav>
-            <DiscoverCompanies/>
+            <CompareCompany/>
             <Footer />
         </div>
     )
