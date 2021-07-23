@@ -274,11 +274,11 @@ export function DiscoverCompanies() {
                     <p>Recommendations are based on your profile, job preferences, and activity on Glassdoor.</p>
                     <div>
                         <CompanyCard>
-                        <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                        <img src="https://media.glassdoor.com/sqls/1651/microsoft-squarelogo-1479856042252.png" alt="" />
                         <div>
                             <div>
-                                <h3>Google</h3>
-                                <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <h3>Microsoft</h3>
+                                <p style={{ color: "rgb(12,170,65)" }}>4.4
                                 <FaStar color="rgb(12,170,65)" fontSize="12px"/>
                                 </p>
                             </div>
@@ -310,11 +310,11 @@ export function DiscoverCompanies() {
                         </div>
                     </CompanyCard>
                     <CompanyCard>
-                        <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                        <img src="https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png" alt="" />
                         <div>
                             <div>
-                                <h3>Google</h3>
-                                <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <h3>Netflix</h3>
+                                <p style={{ color: "rgb(12,170,65)" }}>4.6
                                 <FaStar color="rgb(12,170,65)" fontSize="12px"/>
                                 </p>
                             </div>
@@ -365,11 +365,11 @@ export function DiscoverCompanies() {
                     <Card1>
                         <div>
                             <div>
-                                 <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                                 <img src="https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png" alt="" />
                             </div>
                             <div>
-                                <h3>Google</h3>
-                                <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <h3>Amazon</h3>
+                                <p style={{ color: "rgb(12,170,65)" }}>4.3
                                 <FaStar color="rgb(12,170,65)" fontSize="12px"/>
                                 </p>
                             </div>
@@ -386,11 +386,11 @@ export function DiscoverCompanies() {
                     <Card1>
                         <div>
                             <div>
-                                 <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                                 <img src="https://media.glassdoor.com/sql/3472/ericsson-worldwide-squarelogo-1522695466023.png" alt="" />
                             </div>
                             <div>
-                                <h3>Google</h3>
-                                <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <h3>Ericsson-Worldwide</h3>
+                                <p style={{ color: "rgb(12,170,65)" }}>4.1
                                 <FaStar color="rgb(12,170,65)" fontSize="12px"/>
                                 </p>
                             </div>
@@ -413,9 +413,9 @@ export function DiscoverCompanies() {
                 <div>
                     <Card2>
                         <div>
-                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
-                            <h3>Google</h3>
-                            <p style={{ color: "rgb(12,170,65)" }}>4.7
+                            <img src="https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png" alt="" />
+                            <h3>Netflix</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.6
                                 <FaStar color="rgb(12,170,65)" fontSize="12px"/>
                             </p>
                         </div>
@@ -429,16 +429,16 @@ export function DiscoverCompanies() {
                     </Card2>
                     <Card2>
                         <div>
-                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
-                            <h3>Google</h3>
-                            <p style={{ color: "rgb(12,170,65)" }}>4.7
+                            <img src="https://media.glassdoor.com/sqls/1651/microsoft-squarelogo-1479856042252.png" alt="" />
+                            <h3>Microsoft</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.4
                                 <FaStar color="rgb(12,170,65)" fontSize="12px"/>
                             </p>
                         </div>
                         <div>
-                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
-                            <h3>Google</h3>
-                            <p style={{ color: "rgb(12,170,65)" }}>4.7
+                            <img src="https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png" alt="" />
+                            <h3>Amazon</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.3
                                 <FaStar color="rgb(12,170,65)" fontSize="12px"/>
                             </p>
                         </div>
