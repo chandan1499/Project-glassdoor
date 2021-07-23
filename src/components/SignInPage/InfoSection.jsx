@@ -5,6 +5,7 @@ import { AiOutlineDollar } from 'react-icons/ai';
 import { CgBriefcase } from 'react-icons/cg';
 const InfoCont = styled.div`
 position: relative;
+    
     text-align: center;
     h2{
         margin-top: 0;
@@ -21,6 +22,7 @@ position: relative;
     &>div:nth-of-type(2){
         width: 70%;
         margin: auto;
+        padding: 1%;
     }
     &>div:nth-of-type(1)>div{
         display: flex;
@@ -34,6 +36,11 @@ position: relative;
         margin: 0 2%;
     }
 `;
+
+const DropDown = styled.div`
+
+`
+
 
 export function InfoSection() {
     return (
@@ -63,6 +70,7 @@ export function InfoSection() {
             <div>
                 <h1>Explore Glassdoor</h1>
                 <p>Millions of people are searching for jobs, salary information, company reviews, and interview questions. See what others are looking for on Glassdoor today.</p>
+                
             </div>
         </InfoCont>
     )
