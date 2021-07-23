@@ -39,8 +39,8 @@ const Navbar = styled.nav`
 `;
 const Modal = styled.div`
     position:absolute;
-    top:50px;
-    width: 65%;
+    top:40px;
+    width: 70%;
     border:1px solid rgb(59, 59, 59, 0.3);
     border-radius:5px;
     margin:auto;
@@ -50,8 +50,12 @@ const Modal = styled.div`
     z-index:2;
     background-color:white;
     left:13%;
-    height:170px;
+    height:190px;
     padding: 1%;
+    h3{
+        font-size: 17px;
+        font-weight: 500;
+    }
     img{
         width:50%;
     }
@@ -62,6 +66,7 @@ const Modal = styled.div`
         border-radius:5px;
         height:40px;
         width:200px;
+        cursor: pointer;
     }
 `;
 
@@ -96,7 +101,7 @@ export function SignInNavbar() {
                 </div>
             </Navbar>
             
-                <Modal style={{display: jobsModal}}>
+                <Modal style={{display: jobsModal}} onMouseOver={()=>setJobsModal("flex")} onMouseOut={()=>setJobsModal("none")}>
                     <div>
                         <h2>Find the Right Job</h2>
                         <p>Millions of jobs. Search by what matters to you and find the one that's right for you.</p>
@@ -106,7 +111,7 @@ export function SignInNavbar() {
                         <img src="https://www.glassdoor.co.in/app/static/img/lockedHomeHeader/jobs@2x.png" alt="" />
                     </div>
                 </Modal>
-                <Modal style={{display: companiesModal}}>
+                <Modal style={{display: companiesModal}} onMouseOver={()=>setCompaniesModal("flex")} onMouseOut={()=>setCompaniesModal("none")}>
                     <div>
                         <h2>Read Millions of Reviews</h2>
                         <p>Read anonymous reviews on over 600,000 companies worldwide from the people that work there.</p>
@@ -116,7 +121,7 @@ export function SignInNavbar() {
                         <img src="https://www.glassdoor.co.in/app/static/img/lockedHomeHeader/reviews@2x.png" alt="" />
                     </div>
                 </Modal>
-                <Modal style={{display: salariesModal}}>
+                <Modal style={{display: salariesModal}} onMouseOver={()=>setSalariesModal("flex")} onMouseOut={()=>setSalariesModal("none")}>
                     <div>
                         <h2>Compare Salaries</h2>
                         <p>Are you paid fairly? Get a free, personalised salary estimate and compare with millions of salaries.</p>
@@ -126,7 +131,7 @@ export function SignInNavbar() {
                         <img src="https://www.glassdoor.co.in/app/static/img/lockedHomeHeader/salaries@2x.png" alt="" />
                     </div>
                 </Modal>
-                <Modal style={{display: interviewsModal}}>
+                <Modal style={{display: interviewsModal}} onMouseOver={()=>setInterviewsModal("flex")} onMouseOut={()=>setInterviewsModal("none")}>
                     <div>
                         <h2>Prepare for Interviews</h2>
                         <p>Read interview questions ahead of time so you can prep with confidence.</p>
@@ -136,14 +141,22 @@ export function SignInNavbar() {
                         <img src="https://www.glassdoor.co.in/app/static/img/lockedHomeHeader/interview@2x.png" alt="" />
                     </div>
                 </Modal>
-                <Modal style={{display: employersModal}}>
+                <Modal style={{display: employersModal}} onMouseOver={()=>setEmployersModal("flex")} onMouseOut={()=>setEmployersModal("none")}>
                     <div>
-                        <h2>Prepare for Interviews</h2>
-                        <p>Read interview questions ahead of time so you can prep with confidence.</p>
-                        <button>Start Using Glassdoor</button>
+                        <h3>Sign In to Employer Center</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores?</p>
                     </div>
                     <div>
-                        <img src="https://www.glassdoor.co.in/app/static/img/lockedHomeHeader/interview@2x.png" alt="" />
+                    <h3>Post a Job</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae repellendus voluptate?</p>
+                    </div>
+                    <div>
+                    <h3>Glassdoor For Employer Blog</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa consequuntur iusto eaque?</p>
+                    </div>
+                    <div>
+                    <h3>Talk to Sales</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
                 </Modal>    
         </>

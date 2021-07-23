@@ -1,7 +1,11 @@
 import styled from "styled-components";
+import {useState} from "react";
+import axios from 'axios';
 // import FacebookIcon from '@material-ui/icons/Facebook';
 import { FaFacebook } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'
+
+
 const SignInCont = styled.div`
     background: url(${"https://www.glassdoor.com/app/static/img/home/heroLaptop.jpg?v=674d79pgbp"});
     height: 590px;
@@ -9,6 +13,7 @@ const SignInCont = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     &>div>div>p:nth-of-type(1){
         font-size: 12px;
     }  ;
@@ -43,7 +48,10 @@ const SignInCont = styled.div`
         height: 37px;
         /* padding:0 3%; */
         border-radius: 5px;
-
+        &>div{
+            position: absolute;
+            left: 10px;
+        }
     }
     form>button{
        background-color: rgb(24,119,242);
@@ -81,6 +89,50 @@ const SignInCont = styled.div`
 
 
 export function SignInFormSection() {
+    const [loginData, setLoginData] = useState({});
+
+    const handleChange = (e)=>{
+        const {name, value} = e.target;
+
+        setLoginData({...loginData, [name]: value});
+    }
+
+    const postData = ()=>{
+        axios.post("http://localhost:3001/glassdoorUsers", loginData).then((res)=>{
+            console.log(res);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    }
+
+    const handleLogin = (e)=>{
+        e.preventDefault();
+
+        if(loginData.email === undefined || loginData.password === undefined){
+            alert("Email and password should not be empty!");
+            return;
+        }
+
+        axios.get(`http://localhost:3001/glassdoorUsers?email=${loginData.email}`).then((res)=>{
+            if(res.data.length != 0){
+                if(res.data[0].password !== loginData.password){
+                    alert("Invalid Credentials!");
+                }
+                else{
+                    alert("Login sucussfully!");
+                }
+            }
+            else{
+                postData();
+                alert('login sucussfully!');
+            }
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
+
+
     return (
         <SignInCont img={"https://www.glassdoor.com/app/static/img/home/heroLaptop.jpg?v=674d79pgbp"}>
             <div>
@@ -106,9 +158,9 @@ export function SignInFormSection() {
                 
                 <hr />
                 <form action="">
-                    <input type="text" name="" placeholder="Create Account with Email" />
-                    <input type="password" name="" placeholder="Password" />
-                    <button>Continue with Email</button>
+                    <input type="text" name="email" placeholder="Create Account with Email" onChange={handleChange} />
+                    <input type="password" name="password" placeholder="Password" onChange={handleChange} />
+                    <button onClick={handleLogin}>Continue with Email</button>
                 </form>
                 <p>Are You Hiring?Post Jobs</p>
             </div>
