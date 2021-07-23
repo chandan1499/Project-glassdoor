@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import { Navbar } from "../navbar";
+import { Footer } from "../footer";
+import { Redirect, useHistory } from "react-router-dom";
+import { useState } from "react";
 import { FaStar } from 'react-icons/fa';
 import { BsStar } from 'react-icons/bs';
 
@@ -32,6 +36,7 @@ const CompareCont = styled.div`
         color: grey;
         border: 1px solid #cccccc;
         border-radius: 3px;
+        font-weight: 600;
     }
     
     button{
@@ -109,27 +114,46 @@ const CompanyList = styled.div`
 
 
 export function CompareCompany() {
+    const [companies, setCompanies] = useState({});
+    const history = useHistory();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setCompanies({ ...companies, [name]: value });
+    }
+
+    const handleComparison = () => {
+        if ((companies.company1 == undefined || companies.company2 == "") || companies.company2 == undefined || companies.company1 == "") {
+            alert("Please type correct company name!");
+            return;
+        }
+
+        history.push("/ShowComparison");
+    }
+
     return (
         <div>
+            <Navbar />
+
             <CompareCont>
-                
+
                 <img src="https://www.glassdoor.co.in/eiCompare/static/96b453b751fb9c95ceb167faf0122572.png" alt="" />
-                
+
                 <div>
                     <h1>Compare companies to find your perfect fit</h1>
                     <div>
-                        <input type="text" name="" id="" placeholder="Company name"/>
+                        <input type="text" name="company1" placeholder="Company name" onChange={handleChange} />
                         <h2>VS</h2>
-                        <input type="text" name="" id="" placeholder="Company name"/>
+                        <input type="text" name="company2" placeholder="Company name" onChange={handleChange} />
                     </div>
-                    <button>Compare Companies</button>
+                    <button onClick={handleComparison}>Compare Companies</button>
                     <p>Choose two companies to compare using data only found on Glassdoor.</p>
                 </div>
-                
+
                 <img src="https://www.glassdoor.co.in/eiCompare/static/d89014b6c03b5801900207ad3e6ea36b.png" alt="" />
-                
+
             </CompareCont>
-            <div style={{width:"1000px", margin:"auto", textAlign:"left", fontWeight:"400"}}>
+            <div style={{ width: "1000px", margin: "auto", textAlign: "left", fontWeight: "400" }}>
                 <h2>Popular Companies Comparisons</h2>
             </div>
             <CompanyList>
@@ -141,7 +165,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -155,14 +179,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.3</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Amazon
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -172,7 +196,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -186,14 +210,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -203,7 +227,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -217,14 +241,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -234,7 +258,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -248,14 +272,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -265,7 +289,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -279,14 +303,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -296,7 +320,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -310,14 +334,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -327,7 +351,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -341,14 +365,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -358,7 +382,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -372,14 +396,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -389,7 +413,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -403,14 +427,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -420,7 +444,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -434,14 +458,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -451,7 +475,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -465,14 +489,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -482,7 +506,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -496,14 +520,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -513,7 +537,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -527,14 +551,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -544,7 +568,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -558,14 +582,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -575,7 +599,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -589,14 +613,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -606,7 +630,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -620,14 +644,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -637,7 +661,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -651,14 +675,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -668,7 +692,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -682,14 +706,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -699,7 +723,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -713,14 +737,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -730,7 +754,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -744,14 +768,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -761,7 +785,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -775,14 +799,14 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
                 <div>
                     <div>
@@ -792,7 +816,7 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
@@ -806,16 +830,18 @@ export function CompareCompany() {
                             </div>
                             <div>
                                 <div>4.0</div>
-                                   <div><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><FaStar fontSize="10px" color="rgb(13,171,66)"/><BsStar fontSize="10px" color="rgb(13,171,66)"/></div>
+                                <div><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><FaStar fontSize="10px" color="rgb(13,171,66)" /><BsStar fontSize="10px" color="rgb(13,171,66)" /></div>
                             </div>
                         </div>
                         <div>
                             Accenture
                         </div>
                     </div>
-                    
+
                 </div>
             </CompanyList>
+
+            <Footer />
         </div>
     )
 }

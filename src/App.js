@@ -6,6 +6,8 @@ import { SignInPage } from "./components/SignInPage/SignInPage";
 import { CompanyPage } from "./components/CompanySection/CompanyPage";
 import { JobsList } from "./components/JobsListPage/JobsList";
 import { Route, Switch } from "react-router-dom";
+import { ShowCompareCompanies } from "./components/compareCompanies/compareCompany"
+import { CompareCompany } from './components/CompanySection/CompareCompany'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route exact path="/dicoverSalaries" component={DiscoverSalaries} />
         <Route exact path="/discoverInterview" component={DiscoverInterview} />
         <Route exact path="/reviewForm" component={ReviewForm} />
+        <Route exact path="/CompareCompany" component={CompareCompany} />
+        <Route exact path="/ShowComparison" component={ShowCompareCompanies} />
       </Switch>
       {/* <CompanyPage /> */}
     </div>
