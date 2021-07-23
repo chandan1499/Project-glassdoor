@@ -11,7 +11,9 @@ const Dashboard = () => {
 
 return (
     <>
+    <div className={styles.nav_div}>
     <Navbar />
+    </div>
     <div>
     <div className={styles.after_sign_in_upper_whole}>
     <div className={styles.after_sign_in_heading}>
