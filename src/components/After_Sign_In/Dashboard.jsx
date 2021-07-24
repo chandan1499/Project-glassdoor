@@ -6,6 +6,7 @@ import RecentMix from './Recent_mix';
 import styles from './After_sign_in_2.module.css'
 import { Navbar } from '../navbar';
 import { Footer } from '../footer';
+import AfterSignInNav from './AfterSignInNav';
 
 const Dashboard = () => {
 
@@ -13,6 +14,9 @@ return (
     <>
     <div className={styles.nav_div}>
     <Navbar />
+    </div>
+    <div className={styles.nav_res_div}>
+   <AfterSignInNav />
     </div>
     <div>
     <div className={styles.after_sign_in_upper_whole}>

@@ -124,7 +124,7 @@ body{
     /* border: 1px solid olive; */
     /* max-width: 1280px;
     margin: 16px auto; */
-   
+    overflow: auto;
 }
 .suggest_div1{
     border-top: none;
@@ -677,15 +677,178 @@ body{
     line-height: 22px;
     font-size: 12px;
 } */
-
+.nav_res_div{
+    display: none;
+}
 @media only screen and (max-width: 990px){
     .nav_div{
     display: none;
     }
-    .profile_div2_2_2{
+    .nav_res_div{
         display: block;
+    }
+    .profile_div2_2_2{
+        /* display: block; */
+        width: 100%;
         background-color: white;
         border: 1px solid blue;
         color: blue;
     }
+    .profile_div2_2{
+        /* width: 100%; */
+        /* flex-wrap: wrap; */
+    }
+    .profile_div1{
+        width: 100%;
+    }
+    .after_sign_in_upper{
+        flex-direction: column;
+    }
+    .profile_div4{
+        display: none;
+    }
+    .profile_div2{
+        display: block;
+        width: 100%;
+    }
+    .profile_div2 > div {
+        width: 100%;
+    }
+    .recentTopDiv{
+        margin-top: 50px;
+    }
+    .recentMix_div1_2_1_2{
+        /* margin-top: -85px;
+        margin-right: 5%; */
+        /* justify-content:start; */
+        display:none;
+    }
+    .suggest_div1{
+        width:100%;
+    }
+    }
+
+    /* @media only screen and (max-width: 1024px){
+     
+    } */
+    .ASINav_div_1{
+        box-sizing: border-box;
+        display: flex !important;
+        flex-basis: 0;
+-webkit-box-flex: 1;
+flex-grow: 1;
+max-width: 100%;
+margin: 0 auto;
+max-width: 1280px;
+height: 30px;
+
+    }
+    .ASINav_div_1_1{
+        padding-right: 24px !important;
+padding-left: 24px !important;
+display: flex !important;
+flex: auto;
+    }
+    .ASINav_div_1_1>div:nth-child(1){
+        -webkit-box-ordinal-group: 1;
+        order: 0;
+        display: flex !important;
+
+    }
+    .ASINav_div_1_1>div:nth-child(2){
+        -webkit-box-ordinal-group: 2;
+        order: 1;
+        display: flex !important;
+        color: #20262e;
+        align-items: center !important;
+
+    }
+    .ASINav_div_1_1>div:nth-child(3){
+        -webkit-box-ordinal-group: 3;
+        order: 2;
+        display: flex !important;
+        position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    left: 0;
+    z-index: 1;
+    }
+
+    .ASINav_div_1_1>div:nth-child(1) > span{
+        color: #505863!important;
+        display: flex !important;
+        margin-top: 10px;
+    }
+    .ASINav_div_1_1>div:nth-child(1) > span > svg{
+     color: #505863!important;
+     height: 24px;
+     width: 24px;
+
+    }
+    .ASINav_div_1_1>div:nth-child(1) > span > svg:not(:root){
+        overflow: hidden;
+    }
+    .ASINav_div_1_1>div:nth-child(2) > span{
+        color: #505863!important;
+        display: flex !important;
+        margin-top: 11px;
+        margin-left: 25px;
+    }
+    .ASINav_div_1_1>div:nth-child(2) > span > svg{
+     color: #505863!important;
+     height: 24px;
+     width: 24px;
+
+    }
+    .ASINav_div_1_1>div:nth-child(2) > span > svg:not(:root){
+        overflow: hidden;
+    }
+
+
+    .ASINav_div_1_1>div:nth-child(3) > span{
+        display: flex !important;
+        color: #505863!important;
+        -webkit-box-align: center !important;
+        align-items: center !important;
+        margin-top: 10px;
+    }
+    .ASINav_div_1_1>div:nth-child(3) > span > svg{
+        width: 122px;
+    height: 24px;
+
+    }
+    .ASINav_div_1_1>div:nth-child(3) > span > svg:not(:root){
+        overflow: hidden;
+    }
+
+    .ASINav_div_1_1>div:nth-child(5) > span{
+        color: #505863!important;
+        display: flex !important;
+        margin-top: 10px;
+    }
+    .ASINav_div_1_1>div:nth-child(5) > span > svg{
+     color: #505863!important;
+     height: 24px;
+     width: 24px;
+
+    }
+    .ASINav_div_1_1>div:nth-child(5) > span > svg:not(:root){
+        overflow: hidden;
+    }
+
+    .ASINav_div_1_1>div:nth-child(4){
+        -webkit-box-ordinal-group: 4;
+        order: 3;
+        display: flex !important;
+        flex-basis: 0;
+-webkit-box-flex: 1;
+flex-grow: 1;
+max-width: 100%;
+justify-content: flex-end !important;
+    }
+    .ASINav_div_1_1>div:nth-child(5){
+        -webkit-box-ordinal-group: 5;
+        order: 4;
+        display: flex !important;
+
     }
