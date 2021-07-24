@@ -19,8 +19,12 @@ function App() {
   return (
     <div className="App">
       <Switch>
+<<<<<<< HEAD
         <Route exact path="/" component={SignInPage} />
         <Route exact path="/companyDetails" component={CompanyDetails} />
+=======
+        <Route exact path="/" component={GdforEmp} />
+>>>>>>> a1b7dd67f28563510f9f68599b0e34d9af5db3c9
         <Route exact path="/companies" component={DiscoverCompanies} />
         <Route exact path="/SignIn" component={SignInPage} />
         <Route exact path="/Company" component={CompanyPage} />

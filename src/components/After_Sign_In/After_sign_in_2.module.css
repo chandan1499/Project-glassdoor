@@ -687,6 +687,21 @@ body{
     .nav_div{
     display: none;
     }
+    .signin3_inner{
+        flex-wrap: wrap;
+        margin: 25px auto;
+    }
+    .signInCard_div1{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .signInCard_div2{
+        width: 85%;
+        padding: 30px;
+    }
+    .signInCard_div1 > div > img{
+        width: 100%;
+    }
     .nav_res_div{
         display: block;
     }

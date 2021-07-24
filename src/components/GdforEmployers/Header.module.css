@@ -61,7 +61,7 @@
 .free_employer_account  i{
     color: #0caa41;
 }
-.gdforEmp_header i{
+.gdforEmp_header > i{
     margin-left: 7px;
     color: #404040;
 }

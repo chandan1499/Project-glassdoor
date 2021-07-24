@@ -91,11 +91,11 @@ export function ShowCompareCompanies({location}) {
                                 <p>(full-time and part-time employees only)</p>
                             </div>
                             <div className={styles.compareType}>
-                                <h3 className={styles.rating}>4.5 <span>★</span></h3>
+                                <h3 className={styles.rating}>{company1.rating} <span>★</span></h3>
                                 <p>(based on 17571 reviews)</p>
                             </div>
                             <div className={styles.compareType}>
-                                <h3 className={styles.rating}>4.2 <span>★</span></h3>
+                                <h3 className={styles.rating}>{company2.rating} <span>★</span></h3>
                                 <p>(based on 18501 reviews)</p>
                             </div>
 
@@ -123,7 +123,7 @@ export function ShowCompareCompanies({location}) {
 
 
                             <div className={styles.compareType}>
-                                <h3>Salary (Annual)</h3>
+                                <h3>Salary-Range (Annual)</h3>
                             </div>
                             <div className={styles.compareType}>
                                 <h3>{company1.Salary}</h3>
