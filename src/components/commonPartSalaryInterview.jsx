@@ -1,7 +1,8 @@
 import styles from './commonPartSalaryInterview.module.css';
-import {useRef} from 'react'
+import { useRef } from 'react';
+import {Link} from 'react-router-dom';
 
-export function CommonPartInSalaryAndInterview({searchHeading, infoHeading, infoDescription, infoImage, btnTag}) {
+export function CommonPartInSalaryAndInterview({ searchHeading, infoHeading, infoDescription, infoImage, btnTag }) {
     const cvFileUpload = useRef();
 
     return (
@@ -9,7 +10,7 @@ export function CommonPartInSalaryAndInterview({searchHeading, infoHeading, info
             <div className={styles.salariesBtns}>
                 <div className={styles.salariesBtnFlex}>
                     <h4>Discover Salaries</h4>
-                    <h4>Add a Salary</h4>
+                    <Link to="/reviewForm"> <h4>Add a Salary</h4></Link>
                 </div>
             </div>
             <div className={styles.image}>
@@ -19,7 +20,7 @@ export function CommonPartInSalaryAndInterview({searchHeading, infoHeading, info
                         <input type="text" placeholder="Job Title or Company" />
                         <input className={styles.locationSearch} type="text" placeholder="Location" />
                         <div className={styles.searchIcon}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="40px" viewBox="0 -5 24 26"><path d="M10.5 3a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0010.5 3zm0-1a8.5 8.5 0 016.35 14.15l5 5a.5.5 0 010 .7.5.5 0 01-.71 0l-5-5A8.5 8.5 0 1110.5 2z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="40px" viewBox="0 -5 24 26"><path d="M10.5 3a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0010.5 3zm0-1a8.5 8.5 0 016.35 14.15l5 5a.5.5 0 010 .7.5.5 0 01-.71 0l-5-5A8.5 8.5 0 1110.5 2z" fill="white"></path></svg>
                         </div>
                     </div>
                 </div>

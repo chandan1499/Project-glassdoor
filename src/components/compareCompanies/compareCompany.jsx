@@ -2,7 +2,26 @@ import { Navbar } from '../navbar';
 import { Footer } from '../footer';
 import styled from "styled-components";
 import styles from "./compareCompany.module.css";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+
+import SignIn3mix from '../After_Sign_In/New_mix';
+
+
+//icons
+import { BiBuildings } from 'react-icons/bi';
+import { FaRegBuilding } from 'react-icons/fa';
+import { CgBriefcase } from 'react-icons/cg';
+import { IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
+import { IoInformationCircleOutline } from 'react-icons/io5';
+import { FaStar } from 'react-icons/fa';
+import { FaRegSmileBeam } from 'react-icons/fa';
+import { AiOutlineRight } from 'react-icons/ai';
+import { RiCustomerService2Line } from 'react-icons/ri';
+import { FaBalanceScaleLeft } from 'react-icons/fa';
+import { FaFileInvoiceDollar } from 'react-icons/fa';
+import { FiPenTool } from 'react-icons/fi';
+import { GrTools } from 'react-icons/gr';
 
 
 const CompanyNav = styled.nav`
@@ -22,10 +41,77 @@ const CompanyNav = styled.nav`
 
 `;
 
+const Cont3 = styled.div`
+    background-color: white;
+    padding: 1%;
+    &>h2, &>p{
+        margin-left: 15%;
+    }
+    &>div{
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+`
+
+
+
+const Card2 = styled.div`
+    display: flex;
+    margin: 10px;
+    
+    img{
+        border: 1px solid #e6e6e6;
+        border-radius: 3px;
+        width: 50px;
+    }
+    &>div{
+        border: 1px solid #f5f5f5;
+        width: 200px;
+        height: 120px;
+        padding: 1%;
+        text-align: center;
+        *{
+            margin: 0;
+        }
+    }
+`
+
+
+const Card3 = styled.div`
+    border: 1px solid #c7c7c7;
+    font-weight: 500;
+    width: 400px;
+    height: 80px;
+    margin: 5px;
+    padding: 1%;
+    &>div{
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        padding: 1%;
+    }
+`;
+
+
+
+
 export function ShowCompareCompanies({location}) {
    // console.log(location);
     const company1 = location.state.first;
     const company2 = location.state.second;
+
+    const history = useHistory();
+    const showDetail = (name, image) => {
+        history.push({
+            pathname: "/companyDetails",
+            state: {
+                name,
+                image
+            }
+        })
+    }
 
     return (
         <div>
@@ -158,6 +244,87 @@ export function ShowCompareCompanies({location}) {
 
                 </div>
             </div>
+
+
+            <Cont3>
+                <h2>Compare Companies</h2>
+                <p>See how companies stack up against their competitors using data only found on Glassdoor.</p>
+                <div>
+                    <Card2>
+                        <div onClick={()=>{showDetail("Netflix", "https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png")}}>
+                            <img src="https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png" alt="" />
+                            <h3>Netflix</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.6
+                                <FaStar color="rgb(12,170,65)" fontSize="12px" />
+                            </p>
+                        </div>
+                        <div onClick={()=>{showDetail("Google", "https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png")}}>
+                            <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
+                            <h3>Google</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.7
+                                <FaStar color="rgb(12,170,65)" fontSize="12px" />
+                            </p>
+                        </div>
+                    </Card2>
+                    <Card2>
+                        <div onClick={()=>{showDetail("Microsoft", "https://media.glassdoor.com/sqls/1651/microsoft-squarelogo-1479856042252.png")}}>
+                            <img src="https://media.glassdoor.com/sqls/1651/microsoft-squarelogo-1479856042252.png" alt="" />
+                            <h3>Microsoft</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.4
+                                <FaStar color="rgb(12,170,65)" fontSize="12px" />
+                            </p>
+                        </div>
+                        <div onClick={()=>{showDetail("Amazon", "https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png")}}>
+                            <img src="https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png" alt="" />
+                            <h3>Amazon</h3>
+                            <p style={{ color: "rgb(12,170,65)" }}>4.3
+                                <FaStar color="rgb(12,170,65)" fontSize="12px" />
+                            </p>
+                        </div>
+                    </Card2>
+                </div>
+                <h3 style={{ color: "rgb(24,97,191)", marginLeft: "40%" }}>Compare Companies <AiOutlineRight /> </h3>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <h2>Explore Sectors</h2>
+                    <div style={{ display: "flex" }}>
+                        <Card3>
+                            <div>
+
+                                <RiCustomerService2Line fontSize="20px" />
+                            </div>
+
+                            <p>Customer Services</p>
+                        </Card3>
+                        <Card3>
+                            <div>
+                                <FaBalanceScaleLeft fontSize="20px" />
+                            </div>
+
+                            <p>Accounting & Legal</p>
+                        </Card3>
+                        <Card3>
+                            <div>
+                                <FaFileInvoiceDollar fontSize="20px" />
+                            </div>
+                            <p>Finance</p>
+                        </Card3>
+                        <Card3>
+                            <div>
+                                <FiPenTool fontSize="20px" />
+                            </div>
+                            <p>Arts, Entertainment &...</p>
+                        </Card3>
+                        <Card3>
+                            <div>
+                                <GrTools fontSize="20px" />
+                            </div>
+                            <p>Building, Repairs &...</p>
+                        </Card3>
+                    </div>
+                </div>
+            </Cont3>
+
+            <SignIn3mix />
             <Footer />
         </div>
     );

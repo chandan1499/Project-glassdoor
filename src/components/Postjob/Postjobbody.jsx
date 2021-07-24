@@ -1,11 +1,26 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import styles from '../GdforEmployers/Employers_body.module.css';
 import axios from 'axios';
 
 
 export function Postjobbody() {
 
-    const [data, setData] = useState({})
+    const [data, setData] = useState({});
+    const [fileName, setFileName] = useState("");
+    const logoRef = useRef();
+
+    const extractValue = (str)=>{
+        let idx = 0;
+        for(let i=str.length-1; i>=0; i--) {
+            if(str[i] === "\\"){
+                idx = i;
+                break;
+            }
+        }
+
+        return str.slice(idx+1);
+    }
+
 
     function handleChange(e) {
         var { name, value } = e.target;
@@ -15,11 +30,12 @@ export function Postjobbody() {
         }
 
         if (name === "imgUrl") {
+            setFileName(extractValue(value));
             let reader = new FileReader();
             reader.readAsDataURL(e.target.files[0]);
 
             reader.onload = (e) => {
-                setData({ ...data, [name]: e.target.result })
+                setData({ ...data, [name]: e.target.result });
                 return;
             }
         }
@@ -67,14 +83,17 @@ export function Postjobbody() {
                         <label >Job Profile <br /> <input onChange={handleChange} type="text" name="jobProfile" /><br /></label>
                         <label >Location <br /> <input onChange={handleChange} type="text" name="location" /><br /></label>
 
-                        <label >Salary Range<br /> <select onChange={handleChange} name="salaryRange" id="">
+                        <label >Salary Range<br /> <select className={styles.salaryRangeSelect} onChange={handleChange} name="salaryRange" id="">
                             <option value="3L-5L">3L-5L</option>
                             <option value="5L-10L">5L-10L</option>
                             <option value="10L-15L">10L-15L</option>
                         </select><br /></label>
 
-                        <label >Company Logo <br /> <input onChange={handleChange} type="file" name="imgUrl" id={styles.chooselogo} /><br /></label>
 
+                        <label className={styles.imgIcon}>Select Logo  <i class="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e)=>{logoRef.current.click()}} /> <br /></label>
+                        <p className={styles.chosenFile}>{fileName}</p>
+                        <input style={{display: 'none'}} onChange={handleChange} ref={logoRef}  type="file" name="imgUrl" id={styles.chooselogo} />
+                        
 
 
 

@@ -37,6 +37,7 @@ const SignInCont = styled.div`
     }
     *{
         margin:0;
+        
     }
     button{
         cursor: pointer;
@@ -140,8 +141,8 @@ export function SignInFormSection() {
         <SignInCont img={"https://www.glassdoor.com/app/static/img/home/heroLaptop.jpg?v=674d79pgbp"}>
             <div>
                 <div>
-                <h1>Find The Job That Fits Your Life</h1>
-                <p>By continuing, you agree to our Terms of Use and Privacy Policy.</p>
+                <h1 style={{color: "white"}}>Find The Job That Fits Your Life</h1>
+                <p style={{color: "white"}}>By continuing, you agree to our Terms of Use and Privacy Policy.</p>
                 <div>
                 <Link to="/Dashboard">  <button style={{ backgroundColor: "rgb(24,119,242)", color: "white" }}>
                     <div>
@@ -163,9 +164,9 @@ export function SignInFormSection() {
                 <form action="">
                     <input type="text" name="email" placeholder="Create Account with Email" onChange={handleChange} />
                     <input type="password" name="password" placeholder="Password" onChange={handleChange} />
-                    <button onClick={handleLogin}>Continue with Email</button>
+                    <button onClick={handleLogin} style={{ color: "white"}}>Continue with Email</button>
                 </form>
-                <p>Are You Hiring?Post Jobs</p>
+                <p style={{color: "white"}}>Are You Hiring?Post Jobs</p>
             </div>
             </div>
             

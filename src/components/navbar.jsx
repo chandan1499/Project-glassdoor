@@ -221,8 +221,8 @@ export function Navbar() {
 
             <div className={styles.forEmployers} style={{ display: forEmployersStyle }} onMouseOver={() => { setForEmployersStyle("block") }} onMouseOut={() => { setForEmployersStyle("none") }}>
                 <ul style={{ borderBottom: "none" }}>
-                    <Link to="/"><li>Unlock Employer Account</li></Link>
-                    <li>Post a Job</li>
+                    <Link to="/forEmployers"><li>Unlock Employer Account</li></Link>
+                    <Link to="/postJob"><li>Post a Job</li></Link>
                     <li>Employer Blog</li>
                     <li>Talk to Sales</li>
                 </ul>

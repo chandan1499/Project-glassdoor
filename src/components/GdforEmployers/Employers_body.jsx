@@ -1,10 +1,24 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './Employers_body.module.css';
 import axios from 'axios'
 
 export function Employers_body() {
 
-    const [data, setData] = useState({})
+    const [data, setData] = useState({});
+    const [fileName, setFileName] = useState("");
+    const logoRef = useRef();
+
+    const extractValue = (str)=>{
+        let idx = 0;
+        for(let i=str.length-1; i>=0; i--) {
+            if(str[i] === "\\"){
+                idx = i;
+                break;
+            }
+        }
+
+        return str.slice(idx+1);
+    }
 
     function handleChange(e) {
         var { name, value } = e.target;
@@ -14,6 +28,7 @@ export function Employers_body() {
         }
 
         if (name === "logo") {
+            setFileName(extractValue(value));
             let reader = new FileReader();
             reader.readAsDataURL(e.target.files[0]);
 
@@ -73,12 +88,10 @@ export function Employers_body() {
                         <label >Company CEO <br /> <input onChange={handleChange} type="text" name="ceo" /><br /></label>
 
 
-                        <label >Select Logo <br /> <input onChange={handleChange} type="file" name="logo" id={styles.chooselogo} /><br /></label>
-
-
-
-
-
+                        <label className={styles.imgIcon}>Select Logo  <i class="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e)=>{logoRef.current.click()}} /> <br /></label>
+                        <p className={styles.chosenFile}>{fileName}</p>
+                        <input style={{display: 'none'}} onChange={handleChange} ref={logoRef}  type="file" name="logo" id={styles.chooselogo} />
+                        
                     </form>
 
                     <button onClick={handleSubmit}>Create Account</button>

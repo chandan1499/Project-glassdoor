@@ -51,7 +51,7 @@ export function JobsList() {
     const [list, setList] = useState([]);
     const [rightShow, setRightShow] = useState({})
     useEffect(() => {
-        axios.get("http://localhost:3002/jobList").then(({data}) => {
+        axios.get("http://localhost:3001/jobList").then(({data}) => {
             console.log('res:', data);
             setList(data)
             setRightShow(data[0])
@@ -65,7 +65,7 @@ export function JobsList() {
         for (let elem of list) {
             if (elem.id === id) {
                 setRightShow(elem);
-                break;
+                return;
             }
         }
     }
@@ -108,13 +108,14 @@ export function JobsList() {
                     <div>
                         {
                             list.map((elem) => {
+                                
                                 return <JobCard {...elem} key={elem.id} handleClick={ handleClick}/>
                             })
                         }
 
                     </div>
                     <div>
-                        <SearchRight {...rightShow}/>
+                        <SearchRight {...rightShow} btnStatus={"Easy Apply"}/>
                     </div>
                 </div>
                 

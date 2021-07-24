@@ -94,9 +94,9 @@ export function CompanyDetails({ location }) {
                             </div>
                         </div>
 
-                        <p>At PayPal, we believe that now is the time to democratize financial services so that moving and managing money is a right for all citizens, not just the affluent. We are driven by this purpose, and we uphold our cultural values of collaboration, innovation, wellness and inclusion as our guide for making decisions and conducting business every day. It is our duty and privilege to be customer champions and put those we serve at the center of everything we do.</p>
-                        <p>We are one team that respects and values diversity of thought for everyone, everywhere, and we actively seek to create an energizing workplace that brings out the best in all of us. If you’re ready to shape the future of money, join the team at PayPal. We're proud to work here. You will be too.</p>
-                        <p><span>Mission:</span> At PayPal (Nasdaq: PYPL), we put people at the center of everything we do. Founded in 1998, we continue to be at the forefront of the digital payments revolution, last year we processed 4 billion payments, of which 1 billion were made on mobile devices. PayPal gives people better ways to connect to their money and to each other, helping them safely access and move their money and offering a choice of how they would like to pay or be paid.</p>
+                        <p>At { companyname}, we believe that now is the time to democratize financial services so that moving and managing money is a right for all citizens, not just the affluent. We are driven by this purpose, and we uphold our cultural values of collaboration, innovation, wellness and inclusion as our guide for making decisions and conducting business every day. It is our duty and privilege to be customer champions and put those we serve at the center of everything we do.</p>
+                        <p>We are one team that respects and values diversity of thought for everyone, everywhere, and we actively seek to create an energizing workplace that brings out the best in all of us. If you’re ready to shape the future of money, join the team at { companyname}. We're proud to work here. You will be too.</p>
+                        <p><span>Mission:</span> At { companyname} (Nasdaq: PYPL), we put people at the center of everything we do. Founded in 1998, we continue to be at the forefront of the digital payments revolution, last year we processed 4 billion payments, of which 1 billion were made on mobile devices. { companyname} gives people better ways to connect to their money and to each other, helping them safely access and move their money and offering a choice of how they would like to pay or be paid.</p>
                     </div>
                     <div className={styles.rightExtraInfo}>
                         <h2>Jobs You May Like</h2>
@@ -106,7 +106,7 @@ export function CompanyDetails({ location }) {
                             </div>
                             <div className={styles.rightCompanyInfo}>
                                 <p>Software Engineer 3</p>
-                                <p>PayPal, Inc. - Bangalore</p>
+                                <p>{ companyname}, Inc. - Bangalore</p>
                                 <p>₹3L - ₹10L</p>
                             </div>
                         </div>
@@ -116,7 +116,7 @@ export function CompanyDetails({ location }) {
                             </div>
                             <div className={styles.rightCompanyInfo}>
                                 <p>MTS1, Software Engineer</p>
-                                <p>PayPal, Inc. - Bangalore</p>
+                                <p>{ companyname}, Inc. - Bangalore</p>
                             </div>
                         </div>
                         <div className={styles.flex}>

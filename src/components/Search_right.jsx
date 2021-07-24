@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './SearchRight.module.css';
 import {useState} from 'react'
 
-const SearchRight = ({company, jobProfile,location,salaryRange}) => {
+const SearchRight = ({company, jobProfile,location,salaryRange, btnStatus}) => {
     
-    const [btnTag, setBtnTag] = useState("Easy Apply");
+    const [btnTag, setBtnTag] = useState(btnStatus);
 
     const handleApply = ()=>{
         if(btnTag === "Applied"){
