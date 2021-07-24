@@ -1,0 +1,30 @@
+.container{
+    height: 1200px;
+    padding: 50px;
+}
+.left{
+    width: 500px;
+    font-family: 'Lato', sans-serif;
+}
+.left1,.left2{
+    border: 1px solid #dbdbdd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.left p{
+    color:#465666 ;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.left a{
+    color:#1354af ;
+    font-size: 20px;
+    font-weight: 800;
+}
+hr{
+    margin: 20px 0px;
+}
+.left i{
+    font-size: 22px;
+}
