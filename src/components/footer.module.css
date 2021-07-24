@@ -186,3 +186,48 @@
     color: black;
     background-color: rgb(230, 230, 230);
 }
+
+@media only screen and (max-width: 990px){
+
+    .footerHeading h4 {
+        width: 70%;
+        margin: 10px auto;
+        font-weight: 500;
+    }
+    .logaWithTitle {
+        width: 50%;
+        margin: -10px auto 15px;
+    }
+    .footerLinks {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            
+        "a b"
+        "c d";
+        width: 70%;
+    }
+    .footerLinks > .footerLinksBox::nth-child(1){
+        grid-area: a;
+    }
+    .footerLinks > .footerLinksBox::nth-child(2){
+        grid-area: b;
+    }
+    .footerLinks > .footerLinksBox::nth-child(3){
+        grid-area: c;
+    }
+    .footerLinks > .footerLinksBox::nth-child(4){
+        grid-area: d;
+    }
+    .appInfo, .appInfo1 {
+       
+        margin-top: 50px;
+        margin:auto;
+    }
+    /* .footerInput input {
+      margin:auto; 
+    }
+    .appInfo{
+        right: 111px;
+    }    */
+}

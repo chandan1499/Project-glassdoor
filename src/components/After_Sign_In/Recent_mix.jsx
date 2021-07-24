@@ -5,7 +5,7 @@ import styles from "./After_sign_in_2.module.css";
 const RecentMix = () => {
   return (
     <>
-      <div>
+      <div className={styles.recentTopDiv}>
         <div className={styles.recentMix_div1_1}>
           <h3>Recent Search</h3>
         </div>
