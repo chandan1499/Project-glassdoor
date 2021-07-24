@@ -50,11 +50,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 70%;
+    color: white;
 }
 
 .footerLinksBox {
     text-align: left;
     padding: 0px 10px;
+    color: white;
 }
 
 .footerLinksBox ul {
@@ -81,6 +83,7 @@
     text-align: center;
     align-items: center;
     margin-top: 50px;
+    color: white;
 }
 
 .appInfo h3 {
