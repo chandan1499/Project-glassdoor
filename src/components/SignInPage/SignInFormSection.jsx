@@ -4,7 +4,7 @@ import axios from 'axios';
 // import FacebookIcon from '@material-ui/icons/Facebook';
 import { FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom';
 
 
 const SignInCont = styled.div`
@@ -143,20 +143,20 @@ export function SignInFormSection() {
                 <h1>Find The Job That Fits Your Life</h1>
                 <p>By continuing, you agree to our Terms of Use and Privacy Policy.</p>
                 <div>
-                    <button style={{ backgroundColor: "rgb(24,119,242)", color: "white" }}>
+                <Link to="/Dashboard">  <button style={{ backgroundColor: "rgb(24,119,242)", color: "white" }}>
                     <div>
                         <FaFacebook fontSize="25px" color="white"/>
 
                     </div>
                     <h3>Continue With Facebook</h3>
-                </button>
-                <button style={{ color: "rgb(220,78,65)", backgroundColor: "white", marginBottom:"10px" }}>
+                </button></Link>
+               <Link to="/Dashboard"> <button style={{ color: "rgb(220,78,65)", backgroundColor: "white", marginBottom:"10px" }}>
                     <div>
                         <FcGoogle fontSize="25px"/>
 
                     </div>
                     <h3>Continue With Google</h3>
-                </button>
+                </button></Link>
                 </div>
                 
                 <hr />

@@ -1,6 +1,6 @@
 import styles from './navbar.module.css';
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 export function Navbar() {
     const [jobTypeStyle, setJobTypeStyle] = useState("none");
@@ -12,7 +12,22 @@ export function Navbar() {
     const [salariesPopStyle, setSalariesPopupStyle] = useState("none");
     const [interviewsPopupStyle, setInterviewsPopupStyle] = useState("none");
     const [forEmployersStyle, setForEmployersStyle] = useState("none");
+    const [query, setQuery] = useState("");
+    const history = useHistory();
 
+    const handleChange = (e)=>{
+        setQuery(e.target.value);
+    }
+
+    const handleSearch = (e)=>{
+        e.preventDefault();
+        if(query === ""){
+            alert("Please type something to search!");
+            return;
+        }
+
+        history.push("/jobsList");
+    }
 
 
     return (
@@ -41,7 +56,7 @@ export function Navbar() {
                             color: "green"
                         }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.5 3a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0010.5 3zm0-1a8.5 8.5 0 016.35 14.15l5 5a.5.5 0 010 .7.5.5 0 01-.71 0l-5-5A8.5 8.5 0 1110.5 2z" fill="currentColor" fillRule="evenodd"></path></svg>
                         <form>
-                            <input className={styles.jobSearch} type="text" placeholder="Job Title, Keywords or Company" />
+                            <input className={styles.jobSearch} type="text" placeholder="Job Title, Keywords or Company" onChange={handleChange}/>
                             <input className={styles.jobtype} onClick={() => { setJobTypeStyle((jobTypeStyle === "none") ? "block" : "none") }} type="text" readOnly={true} value={jobTypeValue} />
                             <svg style={{
                                 position: "relative",
@@ -50,7 +65,7 @@ export function Navbar() {
                             }} onClick={() => { setJobTypeStyle((jobTypeStyle === "none") ? "block" : "none") }}
                                 xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24"><path d="M4.4 9.25l7.386 7.523a1 1 0 001.428 0L20.6 9.25c.5-.509.5-1.324 0-1.833a1.261 1.261 0 00-1.8 0l-6.3 6.416-6.3-6.416a1.261 1.261 0 00-1.8 0c-.5.509-.5 1.324 0 1.833z" fillRule="evenodd" fill="currentColor"></path></svg>
                             <input type="text" placeholder="Location" className={styles.location} />
-                            <button className={styles.searchBtn}>Search</button>
+                            <button className={styles.searchBtn} onClick={handleSearch}>Search</button>
                         </form>
                     </div>
                     <div className={styles.profileSvg}>
@@ -97,7 +112,7 @@ export function Navbar() {
 
             <div className={styles.userProfilePopup} style={{ display: userSettingPopupStyle }} onMouseOver={() => { setUserSettingPopupStyle("block") }} onMouseOut={() => { setUserSettingPopupStyle("none") }}>
                 <ul>
-                    <li>Profile</li>
+                    <Link to="/Profile"><li>Profile</li></Link>
                     <li>CVs</li>
                     <li>Job Preferences</li>
                 </ul>
@@ -111,14 +126,14 @@ export function Navbar() {
                 </ul>
                 <ul style={{ borderBottom: "none" }}>
                     <li>Help Center</li>
-                    <li>Sign out</li>
+                    <Link to="/SignIn"><li>Sign out</li></Link>
                 </ul>
             </div>
 
             <div className={styles.navSecondPartContainer}>
                 <div className={styles.otherLinks}>
                     <div className={styles.flex}>
-                        <div className={styles.link} onMouseOver={() => { setJobsPopupStyle("block") }} onMouseOut={() => { setJobsPopupStyle("none") }}>
+                       <Link to="/jobsList"> <div className={styles.link} onMouseOver={() => { setJobsPopupStyle("block") }} onMouseOut={() => { setJobsPopupStyle("none") }}>
                             <svg
 
                                 xmlns="http://www.w3.org/2000/svg"
@@ -133,10 +148,10 @@ export function Navbar() {
                                 ></path>
                             </svg>
                             <h4>Jobs</h4>
-                        </div>
+                        </div></Link>
                         <div className={styles.link} onMouseOver={() => { setCompaninesPopupStyle("block") }} onMouseOut={() => { setCompaninesPopupStyle("none") }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5 6.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1A.5.5 0 0112 8V7a.5.5 0 01.5-.5zm4 0a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1A.5.5 0 0116 8V7a.5.5 0 01.5-.5zm-4 4a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5zm4 0a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5zm-1 5h-3a.49.49 0 00-.5.5v3.5h4V16a.5.5 0 00-.5-.5zm4-11h-11A.5.5 0 009 5v14.5h3v-4a1 1 0 011-1h4a1 1 0 011 1v4h3V5a.5.5 0 00-.5-.5zm.5-1a1 1 0 011 1v16H8v-16a1 1 0 011-1zm-15 5v1H3.5a.5.5 0 00-.5.5v9.5h3v1H2v-11a.91.91 0 01.78-1z" fill="currentColor" fillRule="evenodd"></path></svg>
-                            <Link to="/CompareCompany"><h4>Companies</h4></Link>
+                            <Link to="/companies"><h4>Companies</h4></Link>
                         </div>
 
                         <Link to="/dicoverSalaries"> <div className={styles.link} onMouseOver={() => { setSalariesPopupStyle("block") }} onMouseOut={() => { setSalariesPopupStyle("none") }}>
@@ -150,10 +165,10 @@ export function Navbar() {
                         </div></Link>
                     </div>
                     <div className={styles.flex}>
-                        <div className={styles.link} onMouseOver={() => { setForEmployersStyle("block") }} onMouseOut={() => { setForEmployersStyle("none") }}>
+                        <Link to="/forEmployers"><div className={styles.link} onMouseOver={() => { setForEmployersStyle("block") }} onMouseOut={() => { setForEmployersStyle("none") }}>
                             <h4>For Employers</h4>
-                        </div>
-                        <div className={styles.link}>
+                        </div></Link>
+                        <Link to="postJob"><div className={styles.link}>
                             <svg
 
                                 xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +183,7 @@ export function Navbar() {
                                 ></path>
                             </svg>
                             <h4>Post Jobs</h4>
-                        </div>
+                        </div></Link>
                     </div>
                 </div>
             </div>
@@ -185,10 +200,10 @@ export function Navbar() {
             </div>
             <div className={styles.companinesPopup} style={{ display: companinesPopupStyle }} onMouseOver={() => { setCompaninesPopupStyle("block") }} onMouseOut={() => { setCompaninesPopupStyle("none") }}>
                 <ul style={{ borderBottom: "none" }}>
-                    <Link to="/CompareCompany"><li>Discover Companies</li></Link>
-                    <Link to="/ShowComparison"><li>Compare Companies</li></Link>
+                    <Link to="/companies"><li>Discover Companies</li></Link>
+                    <Link to="/CompareCompany"><li>Compare Companies</li></Link>
                     <li>Suggested Follows</li>
-                    <li>Write a Review</li>
+                    <Link to="/reviewForm"><li>Write a Review</li></Link>
                 </ul>
             </div>
             <div className={styles.salariesPopup} style={{ display: salariesPopStyle }} onMouseOver={() => { setSalariesPopupStyle("block") }} onMouseOut={() => { setSalariesPopupStyle("none") }}>
@@ -206,7 +221,7 @@ export function Navbar() {
 
             <div className={styles.forEmployers} style={{ display: forEmployersStyle }} onMouseOver={() => { setForEmployersStyle("block") }} onMouseOut={() => { setForEmployersStyle("none") }}>
                 <ul style={{ borderBottom: "none" }}>
-                    <li>Unlock Employer Account</li>
+                    <Link to="/"><li>Unlock Employer Account</li></Link>
                     <li>Post a Job</li>
                     <li>Employer Blog</li>
                     <li>Talk to Sales</li>

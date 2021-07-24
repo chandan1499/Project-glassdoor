@@ -1,7 +1,20 @@
 import React from 'react';
-import styles from './SearchRight.module.css'
+import styles from './SearchRight.module.css';
+import {useState} from 'react'
 
 const SearchRight = ({company, jobProfile,location,salaryRange}) => {
+    
+    const [btnTag, setBtnTag] = useState("Easy Apply");
+
+    const handleApply = ()=>{
+        if(btnTag === "Applied"){
+            alert("You have already applied for this job!");
+            return;
+        }
+
+        setBtnTag("Applied");
+        alert("Successfully applied for this job!");
+    }
 
 return (
     <>
@@ -31,9 +44,9 @@ return (
                     <div>
                         <div>
                             <div>
-                                <button>
+                                <button onClick={handleApply}>
                                     <i></i>
-                                    <span>Easy Apply</span>
+                                    <span>{btnTag}</span>
                                 </button>
                             </div>
                             <div>

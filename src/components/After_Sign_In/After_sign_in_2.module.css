@@ -13,6 +13,9 @@ body{
    
 }
 
+.profileImage img {
+    border-radius: 50%;
+}
 
 .signInCard_div1{
     width: 347px;

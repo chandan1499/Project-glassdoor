@@ -397,6 +397,7 @@ strong{
 }
 .loremText{
     margin-top: 40px;
+    padding: 0px 10px;
 }
 
 .loremText > span{
