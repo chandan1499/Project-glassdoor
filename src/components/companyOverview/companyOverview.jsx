@@ -4,7 +4,9 @@ import { Footer } from '../footer'
 import { Link } from 'react-router-dom';
 
 
-export function CompanyDetails() {
+export function CompanyDetails({ location }) {
+    const companyname = location.state.name;
+    const image = location.state.image;
     return (
         <div>
             <Navbar />
@@ -14,8 +16,8 @@ export function CompanyDetails() {
                         <img src="https://media.glassdoor.com/banner/bh/9848/paypal-banner-1477525372879.jpg" alt="" />
                     </div>
                     <div className={styles.logo}>
-                        <img src="https://media.glassdoor.com/sql/9848/paypal-squarelogo-1562008952564.png" alt="logo" />
-                        <h1 className={styles.companyName}>PayPal</h1>
+                        <img src={image} alt="logo" />
+                        <h1 className={styles.companyName}>{ companyname}</h1>
                     </div>
                     <div className={styles.featuresContainer}>
                         <div className={styles.flex}>
@@ -56,12 +58,12 @@ export function CompanyDetails() {
                 </div>
                 <div className={styles.flex}>
                     <div className={styles.companyoverview}>
-                        <h3>PayPal Overview</h3>
+                        <h3>{companyname} Overview</h3>
                         <div className={styles.flex}>
                             <div>
                                 <div className={styles.flex}>
                                     <p className={styles.typeHeading}>Website: </p>
-                                    <Link><p>www.paypal.com</p></Link>
+                                    <Link><p>www.{companyname}.com</p></Link>
                                 </div>
                                 <div className={styles.flex}>
                                     <p className={styles.typeHeading}>Size: </p>
