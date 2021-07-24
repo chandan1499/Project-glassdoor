@@ -21,6 +21,7 @@ const Cont = styled.div`
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow: auto;
         };
         &>div:nth-of-type(2){
             height: 600px;
@@ -50,7 +51,7 @@ export function JobsList() {
     const [list, setList] = useState([]);
     const [rightShow, setRightShow] = useState({})
     useEffect(() => {
-        axios.get("http://localhost:3001/jobList").then(({data}) => {
+        axios.get("http://localhost:3002/jobList").then(({data}) => {
             console.log('res:', data);
             setList(data)
             setRightShow(data[0])

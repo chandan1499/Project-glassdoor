@@ -2,7 +2,7 @@
     width: 100%;
     background-color: #404040;
     overflow-x: hidden;
-    color: white;
+    color: red;
     font-family: 'Lato', sans-serif;
     position: relative;
 }
@@ -21,6 +21,7 @@
     width: 70%;
     margin: 20px auto;
     font-weight: 500;
+    color: white;
 }
 
 .links {
@@ -77,6 +78,7 @@
     margin: 10px 0px;
     letter-spacing: 0.5px;
     cursor: pointer;
+    color: white;
 }
 
 .appInfo, .appInfo1 {
@@ -89,6 +91,7 @@
 
 .appInfo h3 {
     margin-right: 10px;
+    color: white;
 }
 
 .appInfo svg {
@@ -97,6 +100,7 @@
 
 .appInfo i {
     font-size: 30px;
+    color: white;
 }
 
 .appInfo1 {
@@ -146,6 +150,7 @@
 
 .bottomCredits h4 {
     text-align: center;
+    color: white;
 }
 
 .bottomCredits h4 span {

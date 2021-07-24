@@ -35,7 +35,7 @@ export function Employers_body(){
                         <label >Company CEO <br /> <input onChange={handleChange} type="text" name="companyceo"  /><br /></label>
 
                         
-                        <label >Select Logo <br /> <input onChange={handleChange} type="file" name="logo"  /><br /></label>
+                        <label >Select Logo <br /> <input onChange={handleChange} type="file" name="logo" id={styles.chooselogo} /><br /></label>
 
                         
                         

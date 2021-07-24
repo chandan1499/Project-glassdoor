@@ -33,7 +33,7 @@
     margin-bottom: 20px;
 }
 .form label{
-    color:#afafaf;
+    color:black;
     display: inline;
     margin-left: 50px;
     
@@ -53,5 +53,18 @@
 }
 .form_container textarea{
     width: 500px;
+    margin-left:50px;
+}
+.form_container h3{
     margin-left: 50px;
+}
+.form select{
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+}
+#chooselogo{
+    height: 20px;
+    width: 80px;
+    
 }
