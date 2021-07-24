@@ -31,29 +31,29 @@ const Card = styled.div`
         }
     }
 `
-export function JobCard({imgUrl, company, jobProfile, location, salaryRange, rating, id, handleClick}) {
+export function JobCard({ imgUrl, company, jobProfile, location, salaryRange, rating, id, handleClick }) {
     return (
-                        <Card onClick={()=>handleClick(id)}>
-                            <div>
-                                <img src={imgUrl} alt="" />
-                            <p style={{color:"rgb(12,170,65)"}}>{rating} <FaStar fontSize="12px"/></p> 
-                            </div>
-                            <div>
-                                <p>{company}</p>
-                                <h4>{jobProfile }</h4>
-                                <p>{ location}</p>
-                                <p>{salaryRange} (Employer Est.)</p>
-                            </div>
-                            <div>
-                                <div>
-                                    <BiHeart color="rgb(24,97,191)" fontSize="25px"/>
-                                </div>
-                                <div>
-                                    <h4>Easy Apply</h4>
-                                    <p>7d</p>
-                                </div>
-                            </div>
+        <Card onClick={() => handleClick(id)}>
+            <div style={{width: "20%"}}>
+                <img src={imgUrl} alt="" />
+                <p style={{ color: "rgb(12,170,65)" }}>{rating} <FaStar fontSize="12px" /></p>
+            </div>
+            <div style={{width: "50%"}}>
+                <p>{company}</p>
+                <h4>{jobProfile}</h4>
+                <p>{location}</p>
+                <p>{salaryRange} (Employer Est.)</p>
+            </div>
+            <div style={{width: "30%"}}>
+                <div>
+                    <BiHeart color="rgb(24,97,191)" fontSize="25px" />
+                </div>
+                <div>
+                    <h4>Easy Apply</h4>
+                    <p>7d</p>
+                </div>
+            </div>
 
-                        </Card>
+        </Card>
     )
 }
