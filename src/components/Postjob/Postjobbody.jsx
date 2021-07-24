@@ -83,7 +83,7 @@ export function Postjobbody() {
 
                     </form>
                     <h3>Prerequisites</h3>
-                    <textarea name="prerequisite" id="" cols="30" rows="10" onChange={handleChange} style={{resize: "none"}}></textarea>
+                    <textarea name="prerequisite" id="" cols="30" rows="10" onChange={handleChange} style={{resize: "none",width:"750px"}}></textarea>
 
                     <button onClick={handleSubmit}>Post Job</button>
                 </div>

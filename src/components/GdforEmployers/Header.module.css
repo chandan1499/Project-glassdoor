@@ -6,7 +6,7 @@
     color: #0caa41;
 }
 .gdforEmp_header{
-    height: 150px;
+    height: 170px;
     background-color: white;
 }
 .gdforEmp_header_top{
@@ -24,7 +24,7 @@
 }
 .gdforEmp_header_bottom{
     display: flex;
-    border-bottom:solid 3px #dbd9d9;
+    
     height: 120px;
 }
 .gdforEmp_header_bottom > a{
@@ -61,7 +61,7 @@
 .free_employer_account  i{
     color: #0caa41;
 }
-.gdforEmp_header > i{
+.gdforEmp_header  i{
     margin-left: 7px;
     color: #404040;
 }
