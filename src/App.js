@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={CompanyDetails} />
+        <Route exact path="/" component={GdforEmp} />
         <Route exact path="/companies" component={DiscoverCompanies} />
         <Route exact path="/SignIn" component={SignInPage} />
         <Route exact path="/Company" component={CompanyPage} />
