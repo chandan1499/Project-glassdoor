@@ -15,7 +15,7 @@ import { FiPenTool } from 'react-icons/fi';
 import { GrTools } from 'react-icons/gr';
 import { Navbar } from "../navbar";
 import { Footer } from '../footer';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -252,7 +252,16 @@ const CompanyNav = styled.nav`
 
 
 export function DiscoverCompanies() {
-
+     const history = useHistory();
+    const showDetail = (name, image) => {
+        history.push({
+            pathname: "/companyDetails",
+            state: {
+                name,
+                image
+            }
+            })
+        }
 
 
     return (
@@ -312,7 +321,7 @@ export function DiscoverCompanies() {
                     <h2>Companies Recommended for You</h2>
                     <p>Recommendations are based on your profile, job preferences, and activity on Glassdoor.</p>
                     <div>
-                        <CompanyCard>
+                    <CompanyCard onClick={()=>{showDetail("Microsoft", "https://media.glassdoor.com/sqls/1651/microsoft-squarelogo-1479856042252.png")}}>
                             <img src="https://media.glassdoor.com/sqls/1651/microsoft-squarelogo-1479856042252.png" alt="" />
                             <div>
                                 <div>
@@ -330,7 +339,8 @@ export function DiscoverCompanies() {
                                 <FaRegSmileBeam fontSize="20px" /> <p> Highly Rated for culture and values</p>
                             </div>
                         </CompanyCard>
-                        <CompanyCard>
+                        
+                        <CompanyCard onClick={()=>{showDetail("Google", "https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png")}}>
                             <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
                             <div>
                                 <div>
@@ -348,7 +358,7 @@ export function DiscoverCompanies() {
                                 <FaRegSmileBeam fontSize="20px" /> <p> Highly Rated for culture and values</p>
                             </div>
                         </CompanyCard>
-                        <CompanyCard>
+                        <CompanyCard onClick={()=>{showDetail("Netflix", "https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png")}}>
                             <img src="https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png" alt="" />
                             <div>
                                 <div>
@@ -380,7 +390,7 @@ export function DiscoverCompanies() {
 
                 <h2>Latest Reviews for Recommended Companies</h2>
                 <div>
-                    <Card1>
+                    <Card1 onClick={()=>{showDetail("Google", "https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png")}}>
                         <div>
                             <div>
                                 <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
@@ -401,7 +411,7 @@ export function DiscoverCompanies() {
                             <p>July 3,2021</p>
                         </div>
                     </Card1>
-                    <Card1>
+                    <Card1 onClick={()=>{showDetail("Amazon", "https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png")}}>
                         <div>
                             <div>
                                 <img src="https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png" alt="" />
@@ -422,7 +432,7 @@ export function DiscoverCompanies() {
                             <p>July 3,2021</p>
                         </div>
                     </Card1>
-                    <Card1>
+                    <Card1 onClick={()=>{showDetail("Ericsson-Worldwide", "https://media.glassdoor.com/sql/3472/ericsson-worldwide-squarelogo-1522695466023.png")}}>
                         <div>
                             <div>
                                 <img src="https://media.glassdoor.com/sql/3472/ericsson-worldwide-squarelogo-1522695466023.png" alt="" />
@@ -451,14 +461,14 @@ export function DiscoverCompanies() {
                 <p>See how companies stack up against their competitors using data only found on Glassdoor.</p>
                 <div>
                     <Card2>
-                        <div>
+                        <div onClick={()=>{showDetail("Netflix", "https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png")}}>
                             <img src="https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png" alt="" />
                             <h3>Netflix</h3>
                             <p style={{ color: "rgb(12,170,65)" }}>4.6
                                 <FaStar color="rgb(12,170,65)" fontSize="12px" />
                             </p>
                         </div>
-                        <div>
+                        <div onClick={()=>{showDetail("Google", "https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png")}}>
                             <img src="https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png" alt="" />
                             <h3>Google</h3>
                             <p style={{ color: "rgb(12,170,65)" }}>4.7
@@ -467,14 +477,14 @@ export function DiscoverCompanies() {
                         </div>
                     </Card2>
                     <Card2>
-                        <div>
+                        <div onClick={()=>{showDetail("Microsoft", "https://media.glassdoor.com/sqls/1651/microsoft-squarelogo-1479856042252.png")}}>
                             <img src="https://media.glassdoor.com/sqls/1651/microsoft-squarelogo-1479856042252.png" alt="" />
                             <h3>Microsoft</h3>
                             <p style={{ color: "rgb(12,170,65)" }}>4.4
                                 <FaStar color="rgb(12,170,65)" fontSize="12px" />
                             </p>
                         </div>
-                        <div>
+                        <div onClick={()=>{showDetail("Amazon", "https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png")}}>
                             <img src="https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png" alt="" />
                             <h3>Amazon</h3>
                             <p style={{ color: "rgb(12,170,65)" }}>4.3
