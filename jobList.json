@@ -1,0 +1,22 @@
+{
+  "jobList":[
+    {
+      "imgUrl":"https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png",
+      "company":"Google",
+      "jobProfile":"Full Stack Developer",
+      "location":"Bangalore",
+      "salaryRange":"₹25L-₹40L",
+      "rating":"4.8",
+      "id":1
+    },
+    {
+      "imgUrl":"https://media.glassdoor.com/sql/6036/amazon-squarelogo-1552847650117.png",
+      "company":"Amazon",
+      "jobProfile":"Backend Developer",
+      "location":"Delhi",
+      "salaryRange":"₹20L-₹30L",
+      "rating":"4.3",
+      "id":2
+    }
+  ]
+}

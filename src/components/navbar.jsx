@@ -136,7 +136,7 @@ export function Navbar() {
                         </div>
                         <div className={styles.link} onMouseOver={() => { setCompaninesPopupStyle("block") }} onMouseOut={() => { setCompaninesPopupStyle("none") }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5 6.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1A.5.5 0 0112 8V7a.5.5 0 01.5-.5zm4 0a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1A.5.5 0 0116 8V7a.5.5 0 01.5-.5zm-4 4a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5zm4 0a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5zm-1 5h-3a.49.49 0 00-.5.5v3.5h4V16a.5.5 0 00-.5-.5zm4-11h-11A.5.5 0 009 5v14.5h3v-4a1 1 0 011-1h4a1 1 0 011 1v4h3V5a.5.5 0 00-.5-.5zm.5-1a1 1 0 011 1v16H8v-16a1 1 0 011-1zm-15 5v1H3.5a.5.5 0 00-.5.5v9.5h3v1H2v-11a.91.91 0 01.78-1z" fill="currentColor" fillRule="evenodd"></path></svg>
-                            <h4>Companiness</h4>
+                            <Link to="/CompareCompany"><h4>Companies</h4></Link>
                         </div>
 
                         <Link to="/dicoverSalaries"> <div className={styles.link} onMouseOver={() => { setSalariesPopupStyle("block") }} onMouseOut={() => { setSalariesPopupStyle("none") }}>
@@ -185,8 +185,8 @@ export function Navbar() {
             </div>
             <div className={styles.companinesPopup} style={{ display: companinesPopupStyle }} onMouseOver={() => { setCompaninesPopupStyle("block") }} onMouseOut={() => { setCompaninesPopupStyle("none") }}>
                 <ul style={{ borderBottom: "none" }}>
-                    <li>Discover Companies</li>
-                    <li>Compare Companies</li>
+                    <Link to="/CompareCompany"><li>Discover Companies</li></Link>
+                    <Link to="/ShowComparison"><li>Compare Companies</li></Link>
                     <li>Suggested Follows</li>
                     <li>Write a Review</li>
                 </ul>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SearchRight.module.css'
 
-const SearchRight = () => {
+const SearchRight = ({company, jobProfile,location,salaryRange}) => {
 
 return (
     <>
@@ -9,9 +9,9 @@ return (
         <div className={styles.searchRight_div1_1}>
             <div>
                 <div>
-                    <div>Quor Technologies, Inc.</div>
-                    <div>Front End Developer</div>
-                    <div>Bangalore</div>
+                        <div>{ company}</div>
+                        <div>{ jobProfile}</div>
+                        <div>{ location}</div>
                     <div>
                         <span>
                             <span>
@@ -20,7 +20,7 @@ return (
                                 </span>
                                 Employer Provided Salary:
                             </span>
-                            ₹5L - ₹12L 
+                                { salaryRange}
                             <span className={styles.icon_i}>
                             <svg class="SVGInline-svg greyInfoIcon-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 14A7 7 0 117 0a7 7 0 010 14zm0-.7A6.3 6.3 0 107 .7a6.3 6.3 0 000 12.6zm-.7-7a.7.7 0 011.4 0v4.2a.7.7 0 01-1.4 0zM7 4.2a.7.7 0 110-1.4.7.7 0 010 1.4z" fill="#505863" fill-rule="evenodd"></path></svg>
                             </span>

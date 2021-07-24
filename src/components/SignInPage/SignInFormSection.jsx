@@ -38,6 +38,7 @@ const SignInCont = styled.div`
         margin:0;
     }
     button{
+        cursor: pointer;
         display: flex;
         justify-content: center;
         margin: 10px auto;

@@ -1,0 +1,32 @@
+.footer{
+    height: 600px;
+    background-color: #d0d4d9;
+    
+}
+.footer_inner_flex{
+    display: flex;
+    justify-content:center;
+    padding: 50px;
+}
+.footer_inner{
+    width: 200px;
+    margin-left: 30px;
+    
+}
+.footer_inner > p{
+    color:#465666 ;
+    font-size: 20px;
+    margin-bottom: -10px;
+    line-height: 25px;
+}
+.footer_inner > h2{
+    font-weight: 400;
+    font-size: 30px;
+}
+.footer > a{
+    margin-left: 280px;
+}
+.footer_inner i{
+    font-size: 30px;
+}
+
