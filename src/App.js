@@ -10,7 +10,7 @@ import Dashboard from "./components/After_Sign_In/Dashboard";
 import Profile from "./components/Profile_Page/Profile";
 import {ShowCompareCompanies} from './components/compareCompanies/compareCompany';
 import {CompareCompany} from './components/CompanySection/CompareCompany';
-import {GdforEmp} from './components/'
+import {GdforEmp} from './components/GdforEmployers/GdforEmp'
 
 function App() {
   return (
