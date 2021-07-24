@@ -21,7 +21,7 @@ const SignIn3mix = () => {
           />
           <SignIn3
             img="https://blog-consumer.glassdoor.com/site-us/app/uploads/sites/2/GettyImages-601394282-e1543596187398-390x193.jpg"
-            h4="Glassdoor's Employees' Choice Awards 2019"
+            h4="Glassdoor's Employees' Choice Awards 2019 and Best Employee Award"
             p="Glassdoor's annual Employees' Choice Awards honor the Best Places to Work across North America and parts of Europe."
             btn="See the 2019 List"
           />
