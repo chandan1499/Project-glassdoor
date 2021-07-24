@@ -14,6 +14,7 @@
 .footerHeading {
     width: 100%;
     border-bottom: 1px solid rgb(201, 197, 197);
+    color: white;
 }
 
 .footerHeading h4 {
