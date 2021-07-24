@@ -37,5 +37,67 @@
       "password": "123",
       "id": 4
     }
+  ],
+  "companies": [
+    {
+      "name": "Google",
+      "ceo": "Sunder Pichai",
+      "foundedYear": "1998",
+      "totalEmployee": "5001 - 20000",
+      "companyType": "Private Sector",
+      "Salary": "5L - 50L",
+      "logo" : "https://media.glassdoor.com/sql/9079/google-squarelogo-1441130773284.png",
+      "status": "Operating",
+      "Revenue": "$15+ billion (USD)",
+      "website": "www.google.com"
+    },
+    {
+      "name": "Facebook",
+      "ceo": "Mark Zuckerberg",
+      "foundedYear": "2004",
+      "totalEmployee": "10000+",
+      "companyType": "Private Sector",
+      "Salary": "3L - 50L",
+      "logo": "https://media.glassdoor.com/sql/40772/facebook-squareLogo-1621582235975.png",
+      "status": "Operating",
+      "Revenue": "$13+ billion (USD)",
+      "website": "www.facebook.com"
+    },
+    {
+      "name": "PayPal",
+      "ceo": "Dan Schulman",
+      "foundedYear": "1998",
+      "totalEmployee": "10000+",
+      "companyType": "Public Sector",
+      "Salary": "3L - 50L",
+      "logo": "https://media.glassdoor.com/sql/9848/paypal-squarelogo-1562008952564.png",
+      "status": "Operating",
+      "Revenue": "$10+ billion (USD)",
+      "website": "www.Paypal.com"
+    },
+    {
+      "name": "Microsoft",
+      "ceo": "Satya Nadella",
+      "foundedYear": "1975",
+      "totalEmployee": "10000+",
+      "companyType": "Public Sector",
+      "Salary": "3L - 50L",
+      "logo": "https://media.glassdoor.com/sql/1651/microsoft-squarelogo-1479856042252.png",
+      "status": "Operating",
+      "Revenue": "$10+ billion (USD)",
+      "website": "www.microsoft.com"
+    },
+    {
+      "name": "Masai School",
+      "ceo": "Prateek Shukla",
+      "foundedYear": "2019",
+      "totalEmployee": "1 - 50",
+      "companyType": "Private Sector",
+      "Salary": "3L - 30L",
+      "logo": "https://img.icons8.com/ios-glyphs/90/000000/organization.png",
+      "status": "Operating",
+      "Revenue": "$1+ billion (USD)",
+      "website": "www.masaischool.com"
+    }
   ]
 }

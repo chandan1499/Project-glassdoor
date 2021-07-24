@@ -21,8 +21,6 @@ function App() {
         <Route exact path="/reviewForm" component={ReviewForm} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/Profile" component={Profile} />
-         
-        
       </Switch>
     </div>
   );
