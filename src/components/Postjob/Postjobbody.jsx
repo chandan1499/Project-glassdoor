@@ -60,7 +60,7 @@ export function Postjobbody() {
 
         console.log(data);
 
-        axios.post("http://localhost:3002/jobList", data).then((res) => {
+        axios.post("http://localhost:3001/jobList", data).then((res) => {
             console.log(res);
         }).catch((err) => {
             console.log(err);
