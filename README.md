@@ -1,5 +1,5 @@
 # Glassdoor Clone
-This is the clone of website called glassdoor, which is related to jobs where company can register itself and can post their jobs requirments and users can apply for jobs and review the company and can compare the company on the basis of review, salary, rating etc. Users can also check information about the company.
+This is the clone of website Glassdoor, which is related to jobs where company can register itself and can post their jobs requirements and users can apply for jobs and review the company and can compare the company on the basis of reviews, salaries, ratings etc. Users can also check informations about the company.
 
 ## How to run the app
 <ul>
