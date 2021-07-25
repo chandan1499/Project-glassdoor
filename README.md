@@ -42,3 +42,12 @@ This is the clone of website Glassdoor, which is related to jobs where company c
     <li>Font-awesome Icon</li>
   </ul>
 </ul>
+
+## Team members
+<ul>
+  <li><a href="https://github.com/chandan1499">Chandan Gupta</a></li>
+  <li><a href="https://github.com/chandan1499"></a></li>
+  <li><a href="https://github.com/chandan1499">Chandan Gupta</a></li>
+  <li><a href="https://github.com/chandan1499">Chandan Gupta</a></li>
+</ul>
+
