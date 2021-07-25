@@ -23,8 +23,8 @@ This is the clone of website called glassdoor, which is related to jobs where co
 ## Features
 <ul>
   <li>Signin/Signup</li>
-  <li>Compare Company</li>
-  <li>Search job</li>
+  <li>Compare Companies</li>
+  <li>Search jobs</li>
   <li>Posting a job</li>
   <li>Register company</li>
 </ul>
@@ -37,7 +37,7 @@ This is the clone of website called glassdoor, which is related to jobs where co
     <li>axios</li>
     <li>React Hooks</li>
     <li>React-router-dom</li>
-    <li>Material UI</li>
+    <li>Material UI Icon</li>
     <li>React Icon</li>
     <li>Font-awesome Icon</li>
   </ul>
