@@ -45,9 +45,25 @@ This is the clone of website Glassdoor, which is related to jobs where company c
 
 ## Team members
 <ul>
-  <li><a href="https://github.com/chandan1499">Chandan Gupta</a></li>
-  <li><a href="https://github.com/chandan1499"></a></li>
-  <li><a href="https://github.com/chandan1499">Chandan Gupta</a></li>
-  <li><a href="https://github.com/chandan1499">Chandan Gupta</a></li>
+  <li>Chandan Gupta</li>
+    <ul>
+      <li>Gmail (gupta.chandan1499@gmail.com)<li>
+      <li>Github <a href="https://github.com/chandan1499">https://github.com/chandan1499</a></li>
+    </ul>
+  <li>Kumar Saurav</li>
+    <ul>
+      <li>Gmail (krsaurav1007@gmail.com)<li>
+      <li>Github <a href="https://github.com/ks-1007">https://github.com/ks-1007</a></li>
+    </ul>
+  <li>Gaurav Parmar</li>
+    <ul>
+      <li>Gmail (parmargaurav1234@gmail.com)<li>
+      <li>Github <a href="https://github.com/Gaurav6291">https://github.com/Gaurav6291</a></li>
+    </ul>
+  <li>Nitish Kumar</li>
+    <ul>
+      <li>Gmail (nitish14920@gmail.com)<li>
+      <li>Github <a href="https://github.com/nitish14920">https://github.com/nitish14920</a></li>
+    </ul>
 </ul>
 
