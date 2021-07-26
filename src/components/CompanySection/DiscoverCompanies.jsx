@@ -16,7 +16,7 @@ import { GrTools } from 'react-icons/gr';
 import { Navbar } from "../navbar";
 import { Footer } from '../footer';
 import { Link, useHistory } from 'react-router-dom';
-import axios from 'axios';
+import { useEffect } from 'react';
 
 
 
@@ -262,6 +262,10 @@ export function DiscoverCompanies() {
             }
         })
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
 
     return (

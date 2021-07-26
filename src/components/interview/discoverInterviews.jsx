@@ -11,7 +11,10 @@ export function DiscoverInterview() {
                infoHeading={"Interview Tips. Get a Leg Up."}
                infoDescription={"Read interview questions ahead of time so you can prep with confidence. Did you recently interview? Share what it was like."} 
                infoImage={"	https://media.glassdoor.com/home/value-prop/int/value-prop-carousel-desk-EN.png"}
-               btnTag={"Share Your Experience"}/>
+               btnTag={"Share Your Experience"}
+               navHeading1 = {"Discover Interviews"}
+               navHeading2 = {"Add an Interview"}
+               />
             <div className={styles.typeOfSalaries}>
                 <ul>
                     <li className={styles.heading}>Difficult Interviews</li>

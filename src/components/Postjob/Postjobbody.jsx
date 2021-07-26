@@ -9,16 +9,16 @@ export function Postjobbody() {
     const [fileName, setFileName] = useState("");
     const logoRef = useRef();
 
-    const extractValue = (str)=>{
+    const extractValue = (str) => {
         let idx = 0;
-        for(let i=str.length-1; i>=0; i--) {
-            if(str[i] === "\\"){
+        for (let i = str.length - 1; i >= 0; i--) {
+            if (str[i] === "\\") {
                 idx = i;
                 break;
             }
         }
 
-        return str.slice(idx+1);
+        return str.slice(idx + 1);
     }
 
 
@@ -57,8 +57,9 @@ export function Postjobbody() {
         }
 
         data.rating = getRating();
-
-        console.log(data);
+        if (data.imgUrl === undefined) {
+            data.imgUrl = "https://img.icons8.com/ios-glyphs/90/000000/organization.png";
+        }
 
         axios.post("http://localhost:3001/jobList", data).then((res) => {
             console.log(res);
@@ -90,10 +91,10 @@ export function Postjobbody() {
                         </select><br /></label>
 
 
-                        <label className={styles.imgIcon}>Select Logo  <i class="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e)=>{logoRef.current.click()}} /> <br /></label>
+                        <label className={styles.imgIcon}>Select Logo  <i class="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e) => { logoRef.current.click() }} /> <br /></label>
                         <p className={styles.chosenFile}>{fileName}</p>
-                        <input style={{display: 'none'}} onChange={handleChange} ref={logoRef}  type="file" name="imgUrl" id={styles.chooselogo} />
-                        
+                        <input style={{ display: 'none' }} onChange={handleChange} ref={logoRef} type="file" name="imgUrl" id={styles.chooselogo} />
+
 
 
 
@@ -102,7 +103,7 @@ export function Postjobbody() {
 
                     </form>
                     <h3>Prerequisites</h3>
-                    <textarea name="prerequisite" id="" cols="30" rows="10" onChange={handleChange} style={{resize: "none",width:"750px"}}></textarea>
+                    <textarea className={styles.prerequisite} name="prerequisite" id="" cols="30" rows="10" onChange={handleChange}></textarea>
 
                     <button onClick={handleSubmit}>Post Job</button>
                 </div>

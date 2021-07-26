@@ -47,19 +47,38 @@ const InnerNav = styled.div`
         margin: 0 7px;
     }
 `
-export function JobsList() {
+export function JobsList(state) {
+    var query;
+    if (state.location.state != undefined) {
+        query = state.location.state.query;
+    }
+
+    console.log(query);
+
     const [list, setList] = useState([]);
     const [rightShow, setRightShow] = useState({})
     useEffect(() => {
-        axios.get("http://localhost:3001/jobList").then(({data}) => {
-            console.log('res:', data);
-            setList(data)
-            setRightShow(data[0])
-        }).catch((err) => {
-            console.log('err:', err)
-            
-        })    
-    }, [])
+        if (query === undefined) {
+            axios.get("http://localhost:3001/jobList").then(({ data }) => {
+                console.log('res:', data);
+                setList(data)
+                setRightShow(data[0])
+            }).catch((err) => {
+                console.log('err:', err)
+
+            })
+        }
+        else {
+            axios.get(`http://localhost:3001/jobList?q=${query}`).then(({ data }) => {
+                console.log('res:', data);
+                setList(data)
+                setRightShow(data[0])
+            }).catch((err) => {
+                console.log('err:', err)
+
+            })
+        }
+    }, [query])
 
     const handleClick = (id) => {
         for (let elem of list) {
@@ -72,55 +91,55 @@ export function JobsList() {
     return (
         <>
             <Navbar />
-            
+
             <Cont>
                 <InnerNav>
-                <select name="" id="">
-                    <option value="">All Job Types</option>
-                    <option value="">Full-time</option>
-                    <option value="">Part-time</option>
-                    <option value="">Temporary</option>
-                    <option value="">Entry-level</option>
-                </select>
-                <select name="" id="">
-                    <option value="">Posted Any Time</option>
-                    <option value="">Last Day</option>
-                    <option value="">Last 3 Days</option>
-                    <option value="">Last Week</option>
-                    <option value="">Last 2 Weeks</option>
-                    <option value="">Last Month</option>
-                </select>
-                <select name="" id="">
-                    <option value="">₹10L-₹20L</option>
-                </select>
-                <select name="" id="">
-                    <option value="">Exact Location</option>
-                    <option value="">Within 10 km</option>
-                    <option value="">Within 20 km</option>
-                    <option value="">Within 30 km</option>
-                    <option value="">With 50 km</option>
-                    <option value="">Within 50 km</option>
-                    <option value="">Within 100 km</option>
-                </select>
-                
-            </InnerNav>
+                    <select name="" id="">
+                        <option value="">All Job Types</option>
+                        <option value="">Full-time</option>
+                        <option value="">Part-time</option>
+                        <option value="">Temporary</option>
+                        <option value="">Entry-level</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">Posted Any Time</option>
+                        <option value="">Last Day</option>
+                        <option value="">Last 3 Days</option>
+                        <option value="">Last Week</option>
+                        <option value="">Last 2 Weeks</option>
+                        <option value="">Last Month</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">₹10L-₹20L</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">Exact Location</option>
+                        <option value="">Within 10 km</option>
+                        <option value="">Within 20 km</option>
+                        <option value="">Within 30 km</option>
+                        <option value="">With 50 km</option>
+                        <option value="">Within 50 km</option>
+                        <option value="">Within 100 km</option>
+                    </select>
+
+                </InnerNav>
                 <div>
                     <div>
                         {
                             list.map((elem) => {
-                                
-                                return <JobCard {...elem} key={elem.id} handleClick={ handleClick}/>
+
+                                return <JobCard {...elem} key={elem.id} handleClick={handleClick} />
                             })
                         }
 
                     </div>
                     <div>
-                        <SearchRight {...rightShow} btnStatus={"Easy Apply"}/>
+                        <SearchRight {...rightShow} btnStatus={"Easy Apply"} />
                     </div>
                 </div>
-                
+
             </Cont>
-            <Footer/>
+            <Footer />
         </>
     )
 }

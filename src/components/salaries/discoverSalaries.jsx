@@ -14,6 +14,8 @@ export function DiscoverSalaries() {
                infoDescription={"Search salaries and compensation at thousands of companies. Find out if you’re paid fairly. Share your salary anonymously to help others."} 
                infoImage={"https://media.glassdoor.com/home/value-prop/sal/value-prop-carousel-desk-GB.png"}
                btnTag={"Share Your Pay"}
+               navHeading1 = {"Discover Salaries"}
+               navHeading2 = {"Add a Salary"}
             />
             <div className={styles.typeOfSalaries}>
                 <ul>

@@ -84,7 +84,12 @@ export function ReviewForm() {
                         <p className={styles.firstFlexItem}>Last Year at Employer*</p>
                         <div>
                             <input type="text" readOnly={true} value={chosenYear} onClick={() => { setYearPopupStyle((yearPopupStyle === "none") ? "block" : "none") }} />
-                            <svg className="reviewFormSvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.4 9.25l7.386 7.523a1 1 0 001.428 0L20.6 9.25c.5-.509.5-1.324 0-1.833a1.261 1.261 0 00-1.8 0l-6.3 6.416-6.3-6.416a1.261 1.261 0 00-1.8 0c-.5.509-.5 1.324 0 1.833z" fill-rule="evenodd" fill="currentColor"></path></svg>
+                            <svg style={{
+                                position: "relative",
+                                right: "35px",
+                                top: "8px"
+
+                            }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.4 9.25l7.386 7.523a1 1 0 001.428 0L20.6 9.25c.5-.509.5-1.324 0-1.833a1.261 1.261 0 00-1.8 0l-6.3 6.416-6.3-6.416a1.261 1.261 0 00-1.8 0c-.5.509-.5 1.324 0 1.833z" fill-rule="evenodd" fill="currentColor"></path></svg>
                         </div>
                     </div>
                     <div className={styles.flex} style={{ alignItems: "center" }}>

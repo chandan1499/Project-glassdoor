@@ -8,16 +8,16 @@ export function Employers_body() {
     const [fileName, setFileName] = useState("");
     const logoRef = useRef();
 
-    const extractValue = (str)=>{
+    const extractValue = (str) => {
         let idx = 0;
-        for(let i=str.length-1; i>=0; i--) {
-            if(str[i] === "\\"){
+        for (let i = str.length - 1; i >= 0; i--) {
+            if (str[i] === "\\") {
                 idx = i;
                 break;
             }
         }
 
-        return str.slice(idx+1);
+        return str.slice(idx + 1);
     }
 
     function handleChange(e) {
@@ -56,6 +56,10 @@ export function Employers_body() {
 
         data.rating = getRating();
 
+        if (data.logo === undefined) {
+            data.logo = "https://img.icons8.com/ios-glyphs/90/000000/organization.png";
+        }
+
 
         axios.post("http://localhost:3001/companies", data).then((res) => {
             console.log(res);
@@ -88,10 +92,10 @@ export function Employers_body() {
                         <label >Company CEO <br /> <input onChange={handleChange} type="text" name="ceo" /><br /></label>
 
 
-                        <label className={styles.imgIcon}>Select Logo  <i class="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e)=>{logoRef.current.click()}} /> <br /></label>
+                        <label className={styles.imgIcon}>Select Logo  <i class="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e) => { logoRef.current.click() }} /> <br /></label>
                         <p className={styles.chosenFile}>{fileName}</p>
-                        <input style={{display: 'none'}} onChange={handleChange} ref={logoRef}  type="file" name="logo" id={styles.chooselogo} />
-                        
+                        <input style={{ display: 'none' }} onChange={handleChange} ref={logoRef} type="file" name="logo" id={styles.chooselogo} />
+
                     </form>
 
                     <button onClick={handleSubmit}>Create Account</button>

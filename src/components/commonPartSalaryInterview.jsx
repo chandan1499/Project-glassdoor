@@ -2,15 +2,15 @@ import styles from './commonPartSalaryInterview.module.css';
 import { useRef } from 'react';
 import {Link} from 'react-router-dom';
 
-export function CommonPartInSalaryAndInterview({ searchHeading, infoHeading, infoDescription, infoImage, btnTag }) {
+export function CommonPartInSalaryAndInterview({ searchHeading, infoHeading, infoDescription, infoImage, btnTag, navHeading1, navHeading2}) {
     const cvFileUpload = useRef();
 
     return (
         <div>
             <div className={styles.salariesBtns}>
                 <div className={styles.salariesBtnFlex}>
-                    <h4>Discover Salaries</h4>
-                    <Link to="/reviewForm"> <h4>Add a Salary</h4></Link>
+                    <h4>{navHeading1}</h4>
+                    <Link to="/reviewForm"> <h4>{navHeading2}</h4></Link>
                 </div>
             </div>
             <div className={styles.image}>

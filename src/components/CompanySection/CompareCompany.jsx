@@ -144,6 +144,11 @@ export function CompareCompany() {
     const [secondCompany, setSecondCompany] = useState({});
 
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setCompanies({ ...companies, [name]: value });
@@ -162,30 +167,30 @@ export function CompareCompany() {
         getData(companies.company2, 2);
     }
 
-    const getData = (name, num)=>{
-        axios.get(`http://localhost:3001/companies?q=${name}`).then((res)=>{
-            if(res.data.length == 0){
+    const getData = (name, num) => {
+        axios.get(`http://localhost:3001/companies?q=${name}`).then((res) => {
+            if (res.data.length == 0) {
                 alert(`${name} is not registered!`);
                 return;
             }
-            
-            if(num == 1){
-                setFirstCompany({...res.data[0]});
+
+            if (num == 1) {
+                setFirstCompany({ ...res.data[0] });
             }
-            else{
-                setSecondCompany({...res.data[0]});
+            else {
+                setSecondCompany({ ...res.data[0] });
             }
-        }).catch((err)=>{
+        }).catch((err) => {
             console.log(err);
         })
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         showComparison();
-    },[secondCompany])
+    }, [secondCompany])
 
-    const showComparison = ()=>{
-        if(Object.keys(firstCompany).length === 0 || Object.keys(secondCompany).length === 0){
+    const showComparison = () => {
+        if (Object.keys(firstCompany).length === 0 || Object.keys(secondCompany).length === 0) {
             return;
         }
 
@@ -540,7 +545,7 @@ export function CompareCompany() {
                     </div>
 
                 </div>
-                
+
             </CompanyList>
 
             <Footer />

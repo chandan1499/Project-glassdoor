@@ -9,7 +9,7 @@
 }
 .form_container{
     
-    height: 600px;
+    height: fit-content;
     width: 850px;
     margin: auto; 
     background-color: white;
@@ -108,4 +108,15 @@
     padding: 5px 10px;
     height: 32px !important;
     border-radius: 5px;
+}
+
+
+.prerequisite {
+    resize: none;
+    width: 750px !important;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 5px 10px;
+
 }

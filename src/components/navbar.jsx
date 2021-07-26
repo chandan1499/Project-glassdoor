@@ -15,18 +15,23 @@ export function Navbar() {
     const [query, setQuery] = useState("");
     const history = useHistory();
 
-    const handleChange = (e)=>{
+    const handleChange = (e) => {
         setQuery(e.target.value);
     }
 
-    const handleSearch = (e)=>{
+    const handleSearch = (e) => {
         e.preventDefault();
-        if(query === ""){
+        if (query === "") {
             alert("Please type something to search!");
             return;
         }
 
-        history.push("/jobsList");
+        history.push({
+            pathname: "/jobsList",
+            state: {
+                query: query
+            }
+        });
     }
 
 
@@ -56,7 +61,7 @@ export function Navbar() {
                             color: "green"
                         }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.5 3a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0010.5 3zm0-1a8.5 8.5 0 016.35 14.15l5 5a.5.5 0 010 .7.5.5 0 01-.71 0l-5-5A8.5 8.5 0 1110.5 2z" fill="currentColor" fillRule="evenodd"></path></svg>
                         <form>
-                            <input className={styles.jobSearch} type="text" placeholder="Job Title, Keywords or Company" onChange={handleChange}/>
+                            <input className={styles.jobSearch} type="text" placeholder="Job Title, Keywords or Company" onChange={handleChange} />
                             <input className={styles.jobtype} onClick={() => { setJobTypeStyle((jobTypeStyle === "none") ? "block" : "none") }} type="text" readOnly={true} value={jobTypeValue} />
                             <svg style={{
                                 position: "relative",
@@ -133,7 +138,7 @@ export function Navbar() {
             <div className={styles.navSecondPartContainer}>
                 <div className={styles.otherLinks}>
                     <div className={styles.flex}>
-                       <Link to="/jobsList"> <div className={styles.link} onMouseOver={() => { setJobsPopupStyle("block") }} onMouseOut={() => { setJobsPopupStyle("none") }}>
+                        <Link to="/jobsList"> <div className={styles.link} onMouseOver={() => { setJobsPopupStyle("block") }} onMouseOut={() => { setJobsPopupStyle("none") }}>
                             <svg
 
                                 xmlns="http://www.w3.org/2000/svg"
