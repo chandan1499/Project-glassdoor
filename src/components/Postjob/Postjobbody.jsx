@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import styles from '../GdforEmployers/Employers_body.module.css';
+import styles from '../GdforEmployers/EmployersBody.module.css';
 import axios from 'axios';
 
 
@@ -91,7 +91,7 @@ export function Postjobbody() {
                         </select><br /></label>
 
 
-                        <label className={styles.imgIcon}>Select Logo  <i class="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e) => { logoRef.current.click() }} /> <br /></label>
+                        <label className={styles.imgIcon}>Select Logo  <i className="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e) => { logoRef.current.click() }} /> <br /></label>
                         <p className={styles.chosenFile}>{fileName}</p>
                         <input style={{ display: 'none' }} onChange={handleChange} ref={logoRef} type="file" name="imgUrl" id={styles.chooselogo} />
 

@@ -15,7 +15,7 @@
     height: 50px;
     background-color: #f5f6f7;
 }
-.gdforEmp_header_top > a{
+.gdforEmp_header_top > div{
     margin: 10px;
     margin-left: 15px;
     cursor: pointer;
@@ -41,10 +41,16 @@
    color: #404040;
    line-height: 120px;
 }
+.gp{
+    font-size: 25px;
+}
+.gdforEmp_header_bottom_right > .gp:nth-child(3){
+    margin-right: 20px;
+}
 .free_employer_account{
     width: 310px;
     color: #0caa41;
-    margin-top: 8px;
+    margin-top: 30px;
     border: solid 1px #0caa41 ;
     height: 50px;
     line-height: 45px;
@@ -52,6 +58,7 @@
     font-weight: 700;
     text-decoration: none;
     text-align: center ;
+    margin-left: 15px;
 }
 .free_employer_account:hover{
     background-color:#0caa41 ;

@@ -29,7 +29,7 @@ export function CompanyDetails({ location }) {
                     <div className={styles.featuresContainer}>
                         <div className={styles.flex}>
                             <div className={styles.features}>
-                                <i class="fas fa-bullseye"></i>
+                                <i className="fas fa-bullseye"></i>
                                 <p>Overview</p>
                             </div>
                             <div className={styles.features}>
@@ -59,7 +59,7 @@ export function CompanyDetails({ location }) {
                         </div>
                         <div className={styles.flex}>
                             <button className={styles.featuresBtnFollow}>Follow</button>
-                            <button className={styles.featuresBtnSalary}><i class="fas fa-plus"></i>Add a Salary</button>
+                            <button className={styles.featuresBtnSalary}><i className="fas fa-plus"></i>Add a Salary</button>
                         </div>
                     </div>
                 </div>

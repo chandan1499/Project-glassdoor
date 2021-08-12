@@ -482,7 +482,7 @@ body{
     width: 120px;
     overflow: hidden;
     flex-shrink: 0;
-    max-height: 56px;
+    max-height: 120px;
     line-height: 22px;
 }
 .recent_div1_4{
@@ -558,6 +558,7 @@ body{
     background-color: #fff;
     /* margin-left: 18px; */
     margin-left: 23px;
+    width: 695px;
 }
 .recentMix_div1_2_1{
     margin: 0;

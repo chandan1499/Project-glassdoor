@@ -29,6 +29,15 @@ This is the clone of website Glassdoor, which is related to jobs where company c
   <li>Register company</li>
 </ul>
 
+## ScreenShots
+
+<ul>
+<li>
+<img src="./public/glassdoor_snapShots/sign-in.jpg"/>
+</li>
+
+</ul>
+
 ## Used libraries
 <ul>
   <li>node modules</li>

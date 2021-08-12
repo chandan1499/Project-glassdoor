@@ -5,22 +5,22 @@ const Sdata = [
         location:"Jaipur, Rajasthan"
     },
     {
-        title:"Full Stack Web Developer",
+        title:"Backend Developer",
         company:"Macayla Education & Placement Services",
         location:"Jaipur, Rajasthan"
     },
     {
-        title:"Full Stack Web Developer",
+        title:"Web designer",
         company:"UWS (India)",
         location:"Jaipur, Rajasthan"
     },
     {
-        title:"Full Stack Web Developer",
+        title:"Frontend developer",
         company:"Vacancy Factor",
         location:"Jaipur, Rajasthan"
     },
     {
-        title:"Full Stack Developer",
+        title:"Graphics designer",
         company:"OXO Solutions",
         location:"Amer"
     },

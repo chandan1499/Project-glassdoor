@@ -29,13 +29,13 @@ return (
                         <span>
                             <span>
                                 <span>
-                                <svg className={styles.check_svgs} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9"><path fill="none" stroke="#0CAA41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 1L3.759 8 1 5.333"></path></svg>
+                                <svg className={styles.check_svgs} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9"><path fill="none" stroke="#0CAA41" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M11 1L3.759 8 1 5.333"></path></svg>
                                 </span>
                                 Employer Provided Salary:
                             </span>
                                 { salaryRange}
                             <span className={styles.icon_i}>
-                            <svg class="SVGInline-svg greyInfoIcon-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 14A7 7 0 117 0a7 7 0 010 14zm0-.7A6.3 6.3 0 107 .7a6.3 6.3 0 000 12.6zm-.7-7a.7.7 0 011.4 0v4.2a.7.7 0 01-1.4 0zM7 4.2a.7.7 0 110-1.4.7.7 0 010 1.4z" fill="#505863" fill-rule="evenodd"></path></svg>
+                            <svg className="SVGInline-svg greyInfoIcon-svg" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 14A7 7 0 117 0a7 7 0 010 14zm0-.7A6.3 6.3 0 107 .7a6.3 6.3 0 000 12.6zm-.7-7a.7.7 0 011.4 0v4.2a.7.7 0 01-1.4 0zM7 4.2a.7.7 0 110-1.4.7.7 0 010 1.4z" fill="#505863" fillRule="evenodd"></path></svg>
                             </span>
                         </span>
                     </div>
@@ -52,7 +52,7 @@ return (
                             <div>
                                 <button>
                                     <span>
-                                    <svg class="SVGInline-svg save-svg css-zve8bc-svg css-lddn1u-svg e1prsu2a0-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.11l.66-.65a5.56 5.56 0 017.71.19 5.63 5.63 0 010 7.92L12 21l-8.37-8.43a5.63 5.63 0 010-7.92 5.56 5.56 0 017.71-.19zm7.66 6.75a4.6 4.6 0 00-6.49-6.51L12 6.53l-1.17-1.18a4.6 4.6 0 10-6.49 6.51L12 19.58z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                                    <svg className="SVGInline-svg save-svg css-zve8bc-svg css-lddn1u-svg e1prsu2a0-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.11l.66-.65a5.56 5.56 0 017.71.19 5.63 5.63 0 010 7.92L12 21l-8.37-8.43a5.63 5.63 0 010-7.92 5.56 5.56 0 017.71-.19zm7.66 6.75a4.6 4.6 0 00-6.49-6.51L12 6.53l-1.17-1.18a4.6 4.6 0 10-6.49 6.51L12 19.58z" fill="currentColor" fillRule="evenodd"></path></svg>
                                     </span>
                                     <span>Save</span>
                                 </button>
@@ -60,7 +60,7 @@ return (
                             <div>
                                 <div>
                                     <span>
-                                    <svg class="SVGInline-svg css-1cqi1eb-svg e1p6mryr0-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 36"><defs><path id="prefix__aMoreDropdown" d="M7.8 20.8a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm10.2 0a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm10.2 0a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6z"></path></defs><g fill="none" fill-rule="evenodd"><mask id="prefix__bMoreDropdown" fill="#fff"><use xlinkHref="#prefix__aMoreDropdown"></use></mask><use fill="#1861bf" xlinkHref="#prefix__aMoreDropdown"></use><g mask="url(#prefix__bMoreDropdown)"><path d="M0 0h36v36H0z"></path></g></g></svg>
+                                    <svg className="SVGInline-svg css-1cqi1eb-svg e1p6mryr0-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 36"><defs><path id="prefix__aMoreDropdown" d="M7.8 20.8a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm10.2 0a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm10.2 0a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6z"></path></defs><g fill="none" fillRule="evenodd"><mask id="prefix__bMoreDropdown" fill="#fff"><use xlinkHref="#prefix__aMoreDropdown"></use></mask><use fill="#1861bf" xlinkHref="#prefix__aMoreDropdown"></use><g mask="url(#prefix__bMoreDropdown)"><path d="M0 0h36v36H0z"></path></g></g></svg>
                                     </span>
                                     <span>More</span>
                                 </div>
@@ -143,7 +143,7 @@ return (
         <h4>Average Base Salary Estimate</h4>
         <div>
             <span>
-            <svg className={styles.rightStates_svg1} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd"><path d="M15.54 9.24l-5 4.78-2-1.78a.88.88 0 00-1.21 0 .8.8 0 000 1.16l2.63 2.36a.88.88 0 001.21 0l5.66-5.36a.8.8 0 000-1.16.88.88 0 00-1.29 0z"></path><path d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"></path></g></svg>
+            <svg className={styles.rightStates_svg1} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" fillRule="evenodd"><path d="M15.54 9.24l-5 4.78-2-1.78a.88.88 0 00-1.21 0 .8.8 0 000 1.16l2.63 2.36a.88.88 0 001.21 0l5.66-5.36a.8.8 0 000-1.16.88.88 0 00-1.29 0z"></path><path d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"></path></g></svg>
             </span>
             Estimate provided by employer
         </div>

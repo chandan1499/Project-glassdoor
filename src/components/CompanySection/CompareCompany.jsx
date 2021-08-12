@@ -155,7 +155,7 @@ export function CompareCompany() {
     }
 
     const handleComparison = async () => {
-        if ((companies.company1 == undefined || companies.company2 == "") || companies.company2 == undefined || companies.company1 == "") {
+        if ((companies.company1 === undefined || companies.company2 === "") || companies.company2 === undefined || companies.company1 === "") {
             alert("Please type correct company name!");
             return;
         }
@@ -169,12 +169,12 @@ export function CompareCompany() {
 
     const getData = (name, num) => {
         axios.get(`http://localhost:3001/companies?q=${name}`).then((res) => {
-            if (res.data.length == 0) {
+            if (res.data.length === 0) {
                 alert(`${name} is not registered!`);
                 return;
             }
 
-            if (num == 1) {
+            if (num === 1) {
                 setFirstCompany({ ...res.data[0] });
             }
             else {

@@ -119,7 +119,7 @@ export function SignInFormSection() {
         }
 
         axios.get(`http://localhost:3001/glassdoorUsers?email=${loginData.email}`).then((res)=>{
-            if(res.data.length != 0){
+            if(res.data.length !== 0){
                 if(res.data[0].password !== loginData.password){
                     alert("Invalid Credentials!");
                 }
