@@ -101,8 +101,16 @@ export function SignInFormSection() {
         setLoginData({...loginData, [name]: value});
     }
 
-    const postData = ()=>{
-        axios.post("http://localhost:3001/glassdoorUsers", loginData).then((res)=>{
+    const postData = (e) => {
+        e.preventDefault();
+        if(loginData.email === undefined || loginData.password === undefined){
+            setIsInvalid("block");
+            return;
+        }
+        axios.post("http://localhost:3001/glassdoorUsers", loginData).then((res) => {
+            setIsRegistered("block");
+             setIsInvalid("none");
+            setLoginData({email:"", password:""})
             console.log(res);
         })
         .catch((err)=>{
@@ -114,29 +122,32 @@ export function SignInFormSection() {
         e.preventDefault();
 
         if(loginData.email === undefined || loginData.password === undefined){
-            alert("Email and password should not be empty!");
+            setIsInvalid("block");
             return;
         }
 
         axios.get(`http://localhost:3001/glassdoorUsers?email=${loginData.email}`).then((res)=>{
             if(res.data.length !== 0){
-                if(res.data[0].password !== loginData.password){
-                    alert("Invalid Credentials!");
+                if (res.data[0].password !== loginData.password) {
+                    setIsRegistered("none");
+                     setIsInvalid("block")
+
                 }
                 else{
                     history.push("/Dashboard");
                 }
             }
-            else{
-                postData();
-                history.push("/Dashboard");
+            else {
+                setIsRegistered("none");
+                setIsInvalid("block");
+
             }
         }).catch((err)=>{
             console.log(err);
         })
     }
-
-
+    const [isRegistered, setIsRegistered]=useState("none")
+    const [isInValid, setIsInvalid] = useState("none");
     return (
         <SignInCont img={"https://www.glassdoor.com/app/static/img/home/heroLaptop.jpg?v=674d79pgbp"}>
             <div>
@@ -161,10 +172,14 @@ export function SignInFormSection() {
                 </div>
                 
                 <hr />
-                <form action="">
-                    <input type="text" name="email" placeholder="Create Account with Email" onChange={handleChange} />
-                    <input type="password" name="password" placeholder="Password" onChange={handleChange} />
-                    <button onClick={handleLogin} style={{ color: "white"}}>Continue with Email</button>
+                    <form action="">
+                        <h3 style={{color:"greenyellow", display:isRegistered}}>Successfully Registered</h3>
+                        <h3 style={{color:"yellow", display:isInValid}}>Invalid Credentials!</h3>
+                    <input type="text" name="email" value={loginData.email} placeholder="Enter email" onChange={handleChange} />
+                    <input type="password" name="password" value={loginData.password} placeholder="Password" onChange={handleChange} />
+                        <button onClick={handleLogin} style={{ color: "white" }}>Continue with Email</button>
+                        <p style={{color: "white"}}>Or</p>
+                        <button onClick={postData} style={{ color: "white" }}>Sign Up</button>
                 </form>
                 <p style={{color: "white"}}>Are You Hiring?Post Jobs</p>
             </div>
