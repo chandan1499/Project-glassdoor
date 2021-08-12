@@ -32,10 +32,6 @@ This is the clone of website Glassdoor, which is related to jobs where company c
 ## ScreenShots
 
 <ul>
-<<<<<<< HEAD
-<li>
-<img src="./public/glassdoor_snapShots/sign-in.jpg"/>
-=======
 
   <li>
     <h4>Sign-In Page</h4>
@@ -65,7 +61,7 @@ This is the clone of website Glassdoor, which is related to jobs where company c
   <h4>Post-job Section</h4>
   </br>  
   <img src="https://user-images.githubusercontent.com/82999618/129243950-7bd87dd7-a9ec-45e0-a337-8bce275cbda4.png" />
->>>>>>> 93723e4fc12e9b5675c3dd45e212857db4c33acb
+
 </li>
 
 </ul>
