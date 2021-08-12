@@ -29,6 +29,42 @@ This is the clone of website Glassdoor, which is related to jobs where company c
   <li>Register company</li>
 </ul>
 
+## ScreenShots
+
+<ul>
+
+  <li>
+    <h4>Sign-In Page</h4>
+  </br> 
+  <img src="https://user-images.githubusercontent.com/82999618/129242358-738b77e5-ea5e-4c8e-871e-431caf2d27c5.png" />
+</li>
+ 
+  <li>
+  <h4>Dashboard Page</h4>
+  </br>  
+  <img src="https://user-images.githubusercontent.com/82999618/129242573-aa05cf94-9078-4315-b170-5b78b1b05692.png" />
+</li>
+  
+<li>
+<h4>Compare-Companies Page</h4>
+  </br> 
+  <img src="https://user-images.githubusercontent.com/82999618/129242879-96d7f34c-bf0e-4b3d-9dab-c7b5d55e89d1.png" />
+</li>
+
+<li>
+  <h4>Interview Section</h4>
+  </br>  
+  <img src="https://user-images.githubusercontent.com/82999618/129243031-441f25a6-09de-45cc-ad30-abcb63d2d0aa.png" />
+</li>
+
+<li>
+  <h4>Post-job Section</h4>
+  </br>  
+  <img src="https://user-images.githubusercontent.com/82999618/129243950-7bd87dd7-a9ec-45e0-a337-8bce275cbda4.png" />
+</li>
+
+</ul>
+
 ## Used libraries
 <ul>
   <li>node modules</li>
