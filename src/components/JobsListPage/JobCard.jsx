@@ -50,7 +50,7 @@ export function JobCard({ imgUrl, company, jobProfile, location, salaryRange, ra
                 </div>
                 <div>
                     <h4>Easy Apply</h4>
-                    <p>7d</p>
+                    <p>1d</p>
                 </div>
             </div>
 
