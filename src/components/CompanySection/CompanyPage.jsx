@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Navbar } from "../navbar";
 import { Footer } from "../footer";
-import { CompareCompany } from "./CompareCompany";
+// import { CompareCompany } from "./CompareCompany";
 import { DiscoverCompanies } from "./DiscoverCompanies";
 import { Link } from "react-router-dom";
 import { useEffect } from "react"

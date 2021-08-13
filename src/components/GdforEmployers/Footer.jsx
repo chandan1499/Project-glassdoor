@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
+// import Dashboard from '../After_Sign_In/Dashboard'
 export function Footer(){
 
 
@@ -41,18 +43,19 @@ export function Footer(){
                 </div>
                 <div className={styles.footer_inner}>
                     <h2>Contact Us</h2>
-                    <a href="">help.glassdoor.com/Employer/</a>
+                    {/* <a href="">help.glassdoor.com/Employer/</a> */}
+                    <div>help.glassdoor.com/Employer/</div>
                     
                     <h2>Follow Us</h2>
                     <div>
-                        <i class="fab fa-twitter-square"></i>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-youtube"></i>
-                        <i class="fab fa-instagram-square"></i>
+                        <i className="fab fa-twitter-square"></i>
+                        <i className="fab fa-facebook-square"></i>
+                        <i className="fab fa-youtube"></i>
+                        <i className="fab fa-instagram-square"></i>
                     </div>           
                 </div>
             </div>
-            <a href=""><img src="https://www.glassdoor.co.in/employers/app/themes/theme-gd-employers/dist/images/icons/glassdoor-doors-icon.svg?x57299" alt="Glassdoor"></img><span> Looking for Glassdoor.com?</span></a>
+            <Link to="/Dashboard"><img src="https://www.glassdoor.co.in/employers/app/themes/theme-gd-employers/dist/images/icons/glassdoor-doors-icon.svg?x57299" alt="Glassdoor"></img><span> Looking for Glassdoor.com?</span></Link>
 
         </div>
         

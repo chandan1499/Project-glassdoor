@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
-import styles from '../GdforEmployers/Employers_body.module.css';
+import styles from '../GdforEmployers/EmployersBody.module.css';
 import axios from 'axios';
+import { ModalPage } from '../Modal/Modal';
 
 
 export function Postjobbody() {
@@ -8,6 +9,16 @@ export function Postjobbody() {
     const [data, setData] = useState({});
     const [fileName, setFileName] = useState("");
     const logoRef = useRef();
+    const [modalStatus, setModalStatus] = useState({
+        isOpen: false,
+        messege: ""
+    });
+
+    const handleHideModal = () => {
+        setTimeout(() => {
+            setModalStatus({...modalStatus, isOpen: false, messege: ""});
+        },3000)
+    }
 
     const extractValue = (str) => {
         let idx = 0;
@@ -67,12 +78,14 @@ export function Postjobbody() {
             console.log(err);
         })
 
-        alert("Job posted successfully!");
+        setModalStatus({...modalStatus, isOpen: true, messege: "Job posted successfully!"});
+        handleHideModal();
     }
 
 
     return (
         <div>
+            <ModalPage isOpen={modalStatus.isOpen} messege={modalStatus.messege} />
             <div className={styles.body_top}>
 
             </div>
@@ -91,7 +104,7 @@ export function Postjobbody() {
                         </select><br /></label>
 
 
-                        <label className={styles.imgIcon}>Select Logo  <i class="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e) => { logoRef.current.click() }} /> <br /></label>
+                        <label className={styles.imgIcon}>Select Logo  <i className="fas fa-images"></i> <br /><input className={styles.uploadBtn} type="text" readOnly placeholder="Upload File" onClick={(e) => { logoRef.current.click() }} /> <br /></label>
                         <p className={styles.chosenFile}>{fileName}</p>
                         <input style={{ display: 'none' }} onChange={handleChange} ref={logoRef} type="file" name="imgUrl" id={styles.chooselogo} />
 

@@ -33,7 +33,7 @@ export function DiscoverSalaries() {
                     <li>Private Banker Salaries</li>
                     <li>Actuary Salaries</li>
                     <li>Relationship Director Salaries</li>
-                    <li class={styles.extraLink}>More</li>
+                    <li className={styles.extraLink}>More</li>
                 </ul>
                 <ul>
                     <li className={styles.heading}>Highest Salaries</li>

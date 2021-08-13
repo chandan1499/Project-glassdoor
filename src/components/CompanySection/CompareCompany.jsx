@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { FaStar } from 'react-icons/fa';
 import { BsStar } from 'react-icons/bs';
 import axios from 'axios';
+import { ModalPage } from "../Modal/Modal";
 
 const CompareCont = styled.div`
     width: 1000px;
@@ -142,6 +143,16 @@ export function CompareCompany() {
     const history = useHistory();
     const [firstCompany, setFirstCompany] = useState({});
     const [secondCompany, setSecondCompany] = useState({});
+    const [modalStatus, setModalStatus] = useState({
+        isOpen: false,
+        messege: ""
+    });
+
+    const handleHideModal = () => {
+        setTimeout(() => {
+            setModalStatus({...modalStatus, isOpen: false, messege: ""});
+        },3000)
+    }
 
 
     useEffect(() => {
@@ -155,8 +166,9 @@ export function CompareCompany() {
     }
 
     const handleComparison = async () => {
-        if ((companies.company1 == undefined || companies.company2 == "") || companies.company2 == undefined || companies.company1 == "") {
-            alert("Please type correct company name!");
+        if ((companies.company1 === undefined || companies.company2 === "") || companies.company2 === undefined || companies.company1 === "") {
+            setModalStatus({...modalStatus, isOpen: true, messege: "Please type correct company name!"});
+            handleHideModal();
             return;
         }
 
@@ -169,12 +181,13 @@ export function CompareCompany() {
 
     const getData = (name, num) => {
         axios.get(`http://localhost:3001/companies?q=${name}`).then((res) => {
-            if (res.data.length == 0) {
-                alert(`${name} is not registered!`);
+            if (res.data.length === 0) {
+                setModalStatus({...modalStatus, isOpen: true, messege: `${name} is not registered!`});
+                handleHideModal();
                 return;
             }
 
-            if (num == 1) {
+            if (num === 1) {
                 setFirstCompany({ ...res.data[0] });
             }
             else {
@@ -205,6 +218,7 @@ export function CompareCompany() {
 
     return (
         <div>
+            <ModalPage isOpen={modalStatus.isOpen} messege={modalStatus.messege} />
             <Navbar />
             <CompanyNav>
                 <Link to="/companies"><div>Discover Companies</div></Link>

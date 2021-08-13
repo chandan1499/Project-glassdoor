@@ -37,9 +37,9 @@ position: relative;
     }
 `;
 
-const DropDown = styled.div`
+// const DropDown = styled.div`
 
-`
+// `
 
 
 export function InfoSection() {

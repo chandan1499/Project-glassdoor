@@ -11,9 +11,9 @@ import AfterSignInNav from './AfterSignInNav';
 
 const Dashboard = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
 
     return (
         <>

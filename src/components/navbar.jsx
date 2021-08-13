@@ -1,6 +1,7 @@
 import styles from './navbar.module.css';
 import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';
+import { ModalPage } from './Modal/Modal';
 
 export function Navbar() {
     const [jobTypeStyle, setJobTypeStyle] = useState("none");
@@ -14,6 +15,16 @@ export function Navbar() {
     const [forEmployersStyle, setForEmployersStyle] = useState("none");
     const [query, setQuery] = useState("");
     const history = useHistory();
+    const [modalStatus, setModalStatus] = useState({
+        isOpen: false,
+        messege: ""
+    });
+
+    const handleHideModal = () => {
+        setTimeout(() => {
+            setModalStatus({ ...modalStatus, isOpen: false, messege: "" });
+        }, 3000)
+    }
 
     const handleChange = (e) => {
         setQuery(e.target.value);
@@ -22,7 +33,8 @@ export function Navbar() {
     const handleSearch = (e) => {
         e.preventDefault();
         if (query === "") {
-            alert("Please type something to search!");
+            setModalStatus({ ...modalStatus, isOpen: true, messege: "Please type something to search!" });
+            handleHideModal();
             return;
         }
 
@@ -38,6 +50,7 @@ export function Navbar() {
     return (
 
         <div>
+            <ModalPage isOpen={modalStatus.isOpen} messege={modalStatus.messege} />
             <div className={styles.container}>
                 <div className={styles.navbarCont}>
                     <Link to="/"><svg

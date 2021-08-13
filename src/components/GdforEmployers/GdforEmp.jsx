@@ -1,4 +1,4 @@
-import { Employers_body } from "./Employers_body";
+import { EmployersBody } from "./EmployersBody";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import SignIn3mix from '../After_Sign_In/New_mix';
@@ -8,7 +8,7 @@ export function GdforEmp(){
     return (
         <>
         <Header/>
-        <Employers_body/>
+        <EmployersBody/>
         <SignIn3mix />
         <Footer/>
         </>

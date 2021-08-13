@@ -8,14 +8,14 @@ import SignIn3mix from '../After_Sign_In/New_mix';
 
 
 //icons
-import { BiBuildings } from 'react-icons/bi';
-import { FaRegBuilding } from 'react-icons/fa';
-import { CgBriefcase } from 'react-icons/cg';
-import { IoIosArrowBack } from 'react-icons/io';
-import { IoIosArrowForward } from 'react-icons/io';
-import { IoInformationCircleOutline } from 'react-icons/io5';
+// import { BiBuildings } from 'react-icons/bi';
+// import { FaRegBuilding } from 'react-icons/fa';
+// import { CgBriefcase } from 'react-icons/cg';
+// import { IoIosArrowBack } from 'react-icons/io';
+// import { IoIosArrowForward } from 'react-icons/io';
+// import { IoInformationCircleOutline } from 'react-icons/io5';
 import { FaStar } from 'react-icons/fa';
-import { FaRegSmileBeam } from 'react-icons/fa';
+// import { FaRegSmileBeam } from 'react-icons/fa';
 import { AiOutlineRight } from 'react-icons/ai';
 import { RiCustomerService2Line } from 'react-icons/ri';
 import { FaBalanceScaleLeft } from 'react-icons/fa';
@@ -134,7 +134,7 @@ export function ShowCompareCompanies({location}) {
                             </div>
                             <div className={styles.compareType}>
                                 <div className={styles.flex}>
-                                    <img src={company1.logo} alt="" />
+                                    <img src={company1.logo} alt="hg" />
                                     <h3 className={styles.name}>{`${company1.name}`}</h3>
                                     <Link to="/CompareCompany"><button>Change</button></Link>
                                 </div>

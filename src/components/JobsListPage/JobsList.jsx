@@ -49,7 +49,7 @@ const InnerNav = styled.div`
 `
 export function JobsList(state) {
     var query;
-    if (state.location.state != undefined) {
+    if (state.location.state !== undefined) {
         query = state.location.state.query;
     }
 
