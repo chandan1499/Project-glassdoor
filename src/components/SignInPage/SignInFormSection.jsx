@@ -148,6 +148,7 @@ export function SignInFormSection() {
     }
     const [isRegistered, setIsRegistered]=useState("none")
     const [isInValid, setIsInvalid] = useState("none");
+    const [isSigningIn, setIsSigningIn] = useState(true);
     return (
         <SignInCont img={"https://www.glassdoor.com/app/static/img/home/heroLaptop.jpg?v=674d79pgbp"}>
             <div>
@@ -176,12 +177,16 @@ export function SignInFormSection() {
                         <h3 style={{color:"greenyellow", display:isRegistered}}>Successfully Registered</h3>
                         <h3 style={{color:"yellow", display:isInValid}}>Invalid Credentials!</h3>
                     <input type="text" name="email" value={loginData.email} placeholder="Enter email" onChange={handleChange} />
-                    <input type="password" name="password" value={loginData.password} placeholder="Password" onChange={handleChange} />
-                        <button onClick={handleLogin} style={{ color: "white" }}>Continue with Email</button>
-                        <p style={{color: "white"}}>Or</p>
+                        <input type="password" name="password" value={loginData.password} placeholder="Password" onChange={handleChange} />
+                        {
+                            isSigningIn ?
+                                <button onClick={handleLogin} style={{ color: "white" }}>Continue with Email</button> :
                         <button onClick={postData} style={{ color: "white" }}>Sign Up</button>
+                                
+                            
+                        }
                 </form>
-                <p style={{color: "white"}}>Are You Hiring?Post Jobs</p>
+                    <p style={{ color: "white", cursor:"pointer" }} onClick={()=>setIsSigningIn(!isSigningIn)}>{ isSigningIn?"Click here to Sign Up":"Click here to Sign In"}</p>
             </div>
             </div>
             
