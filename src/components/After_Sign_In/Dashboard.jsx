@@ -1,5 +1,4 @@
-import React from 'react'
-import { useEffect } from 'react';
+import React from 'react';
 import StepsMix from './Steps_mix';
 import SignIn3mix from './New_mix';
 import SuggestMix from './Suggest_mix';
