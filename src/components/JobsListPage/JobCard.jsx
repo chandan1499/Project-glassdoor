@@ -33,7 +33,7 @@ const Card = styled.div`
 `
 export function JobCard({ imgUrl, company, jobProfile, location, salaryRange, rating, id, handleClick }) {
     return (
-        <Card onClick={() => handleClick(id)}>
+        <Card style={{cursor:"pointer"}} onClick={() => handleClick(id)}>
             <div style={{width: "20%"}}>
                 <img src={imgUrl} alt="" />
                 <p style={{ color: "rgb(12,170,65)" }}>{rating} <FaStar fontSize="12px" /></p>
