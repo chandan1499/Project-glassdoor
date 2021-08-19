@@ -29,6 +29,9 @@ This is the clone of website Glassdoor, which is related to jobs where company c
   <li>Register company</li>
 </ul>
 
+## Demo video of the project
+  <a href="https://drive.google.com/file/d/1A2Xbea-YsW7dvIU-sWWJVYS1mMu70D3s/view?usp=sharing">Click here to watch demo video</a>
+  
 ## ScreenShots
 
 <ul>
