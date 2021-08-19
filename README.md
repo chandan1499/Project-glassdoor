@@ -67,7 +67,8 @@ This is the clone of website Glassdoor, which is related to jobs where company c
 </ul>
 
 ## Demo video of the project
-  <a href="https://drive.google.com/file/d/1A2Xbea-YsW7dvIU-sWWJVYS1mMu70D3s/view?usp=sharing">Demo video link</a>
+<!--   <a href="https://drive.google.com/file/d/1A2Xbea-YsW7dvIU-sWWJVYS1mMu70D3s/view?usp=sharing">Demo video link</a> -->
+<video src="https://drive.google.com/file/d/1A2Xbea-YsW7dvIU-sWWJVYS1mMu70D3s/view?usp=sharing" controls></video>
 
 ## Used libraries
 <ul>
