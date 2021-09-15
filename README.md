@@ -92,17 +92,17 @@ This is the clone of website Glassdoor, which is related to jobs where company c
     </ul>
   <li>Kumar Saurav</li>
     <ul>
-      <li>Gmail (krsaurav1007@gmail.com)</li>
+      <li>Gmail <a href="mailto:krsaurav1007@gmail.com">krsaurav1007@gmail.com</a></li>
       <li>Github <a href="https://github.com/ks-1007">https://github.com/ks-1007</a></li>
     </ul>
   <li>Gaurav Parmar</li>
     <ul>
-      <li>Gmail (parmargaurav1234@gmail.com)</li>
+      <li>Gmail <a href="mailto:parmargaurav1234@gmail.com">parmargaurav1234@gmail.com</a></li>
       <li>Github <a href="https://github.com/Gaurav6291">https://github.com/Gaurav6291</a></li>
     </ul>
   <li>Nitish Kumar</li>
     <ul>
-      <li>Gmail (nitish14920@gmail.com)</li>
+      <li>Gmail <a href="mailto:nitish14920@gmail.com">nitish14920@gmail.com</a></li>
       <li>Github <a href="https://github.com/nitish14920">https://github.com/nitish14920</a></li>
     </ul>
 </ul>
