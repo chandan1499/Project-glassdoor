@@ -87,7 +87,7 @@ This is the clone of website Glassdoor, which is related to jobs where company c
 <ul>
   <li>Chandan Gupta</li>
     <ul>
-      <li>Gmail (gupta.chandan1499@gmail.com)</li>
+      <li>Gmail <a href="mailto:gupta.chandan1499@gmail.com">gupta.chandan1499@gmail.com</a></li>
       <li>Github <a href="https://github.com/chandan1499">https://github.com/chandan1499</a></li>
     </ul>
   <li>Kumar Saurav</li>
