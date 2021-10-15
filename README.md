@@ -1,6 +1,8 @@
 # Glassdoor Clone
 This is the clone of website Glassdoor, which is related to jobs where company can register itself and can post their jobs requirements and users can apply for jobs and review the company and can compare the company on the basis of reviews, salaries, ratings etc. Users can also check informations about the company.
 
+## Demo of the project: 
+
 ## How to run the app
 <ul>
   <li>Clone the repo and run following command to start the application.</li>
