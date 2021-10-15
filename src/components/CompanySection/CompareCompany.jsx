@@ -180,7 +180,7 @@ export function CompareCompany() {
     }
 
     const getData = (name, num) => {
-        axios.get(`http://localhost:3001/companies?q=${name}`).then((res) => {
+        axios.get(`https://glassdoor-clone-server.herokuapp.com/companies?q=${name}`).then((res) => {
             if (res.data.length === 0) {
                 setModalStatus({...modalStatus, isOpen: true, messege: `${name} is not registered!`});
                 handleHideModal();

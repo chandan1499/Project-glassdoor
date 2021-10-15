@@ -72,7 +72,7 @@ export function EmployersBody() {
         }
 
 
-        axios.post("http://localhost:3001/companies", data).then((res) => {
+        axios.post("https://glassdoor-clone-server.herokuapp.com/companies", data).then((res) => {
             console.log(res);
         }).catch((err) => {
             console.log(err);

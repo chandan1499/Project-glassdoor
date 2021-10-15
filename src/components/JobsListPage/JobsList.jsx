@@ -59,7 +59,7 @@ export function JobsList(state) {
     const [rightShow, setRightShow] = useState({})
     useEffect(() => {
         if (query === undefined) {
-            axios.get("http://localhost:3001/jobList").then(({ data }) => {
+            axios.get("https://glassdoor-clone-server.herokuapp.com/jobList").then(({ data }) => {
                 console.log('res:', data);
                 setList(data)
                 setRightShow(data[0])
@@ -69,7 +69,7 @@ export function JobsList(state) {
             })
         }
         else {
-            axios.get(`http://localhost:3001/jobList?q=${query}`).then(({ data }) => {
+            axios.get(`https://glassdoor-clone-server.herokuapp.com/jobList?q=${query}`).then(({ data }) => {
                 console.log('res:', data);
                 setList(data)
                 setRightShow(data[0])

@@ -108,7 +108,7 @@ export function SignInFormSection() {
   const postData = (e) => {
     e.preventDefault()
     axios
-      .get(`http://localhost:3001/glassdoorUsers?email=${loginData.email}`)
+      .get(`https://glassdoor-clone-server.herokuapp.com/glassdoorUsers?email=${loginData.email}`)
       .then(({ data }) => {
         if (data.length) {
           setModalStatus({ ...modalStatus, isOpen: true, messege: `User with ${loginData.email} already registered` });
@@ -117,7 +117,7 @@ export function SignInFormSection() {
           return
         } else {
           axios
-            .post("http://localhost:3001/glassdoorUsers", loginData)
+            .post("https://glassdoor-clone-server.herokuapp.com/glassdoorUsers", loginData)
             .then((res) => {
               setIsRegistered("block")
               setIsInvalid("none")
@@ -147,7 +147,7 @@ export function SignInFormSection() {
     }
 
     axios
-      .get(`http://localhost:3001/glassdoorUsers?email=${loginData.email}`)
+      .get(`https://glassdoor-clone-server.herokuapp.com/glassdoorUsers?email=${loginData.email}`)
       .then((res) => {
         if (res.data.length !== 0) {
           if (res.data[0].password !== loginData.password) {
@@ -168,6 +168,7 @@ export function SignInFormSection() {
   const [isRegistered, setIsRegistered] = useState("none")
   const [isInValid, setIsInvalid] = useState("none")
   const [isSigningIn, setIsSigningIn] = useState(true)
+
   return (
     <>
       <ModalPage isOpen={modalStatus.isOpen} messege={modalStatus.messege} />
